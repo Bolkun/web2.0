@@ -5,7 +5,9 @@ print ("Content-type: text/html\n\n")
 print ("Hallo Welt!")
 
 # Das ist ein Zeilenkommentar
-# Terminal python -v
+# Terminal  python -v
+# 			cd Desktop
+#			python 1-variableTypes.py
 
 """
 Das ist ein Blockkommentar

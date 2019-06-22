@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Test React</title>
+
+<!-- Load React API -->
+<script src= "https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<!-- Load React DOM-->
+<script src= "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<!-- Load Babel Compiler -->
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+<body>
+
+<div id="root"></div>
+<div id="root2"></div>
+<div id="root3"></div>
+<div id="root4"></div>
+
+<script type="text/babel">
+    // JSX Babel code goes here
+	function Welcome() {
+		return <h1>Hello React!</h1>;
+	}
+	ReactDOM.render(<Welcome />, document.getElementById('root'));
+	
+	class Welcome2 extends React.Component { 
+		render() { return(<h1>Hello React2!</h1>); }
+	}
+	ReactDOM.render(<Welcome2 />, document.getElementById('root2'));
+	
+	function Welcome3(props) {
+		return <h1>Hello {props.name}!</h1>;
+	}
+	ReactDOM.render(<Welcome3 name="John Doe"/>, document.getElementById('root3'));
+	
+	class Welcome4 extends React.Component { 
+		render() { return(<h1>Hello {this.props.name}</h1>); }
+	}
+	ReactDOM.render(<Welcome4 name="John Snow"/>, document.getElementById('root4'));
+</script>
+
+</body>
+</html>
