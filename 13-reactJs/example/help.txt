@@ -1,0 +1,16 @@
+/*******GET STARTED********/
+download npm and node.js from https://www.npmjs.com/get-npm
+restart terminal
+npm -v 
+node -v
+
+/*SETTING UP A REACT ENVIRONMENT*/
+C:\Users\Your Name>cd Desktop
+C:\Users\Your Name\Desktop>npm install -g create-react-app
+C:\Users\Your Name\Desktop>npx create-react-app myfirstreact
+
+/*RUN THE REACT APP*/
+C:\Users\Your Name\Desktop>cd myfirstreact
+C:\Users\Your Name\Desktop\myfirstreact>npm start
+https://www.w3schools.com/react/react_getstarted.asp
+
