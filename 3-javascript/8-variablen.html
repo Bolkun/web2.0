@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+
+<body>
+	<input type="text" id="textInput">
+	
+	<button id="textChanger">Veraendere den Text</button>
+	
+	<p id="text">Dies ist super Text</p>
+	
+	<script type="text/javascript">
+		document.getElementById("textChanger").onclick = function() {
+			
+			var eingegebenerText = "";
+			
+			eingegebenerText = document.getElementById("textInput").value;
+			
+			document.getElementById("text").innerHTML = eingegebenerText;
+			
+		}
+	</script>
+</body>
+</html>

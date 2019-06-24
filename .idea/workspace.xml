@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bb9df86-6cc3-4e0a-86f2-d68a08910cd6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9bb9df86-6cc3-4e0a-86f2-d68a08910cd6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,17 +15,18 @@
     <session id="188421279">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="11" />
+          <entry key="html" value="13" />
           <entry key="py" value="1" />
         </counts>
       </usages-collector>
@@ -32,11 +34,12 @@
         <counts>
           <entry key="HTML" value="10" />
           <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Svelte" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="152" />
+          <entry key="html" value="157" />
           <entry key="py" value="30" />
         </counts>
       </usages-collector>
@@ -44,6 +47,7 @@
         <counts>
           <entry key="HTML" value="152" />
           <entry key="PLAIN_TEXT" value="30" />
+          <entry key="Svelte" value="5" />
         </counts>
       </usages-collector>
     </session>
@@ -67,6 +71,8 @@
         <option value="$PROJECT_DIR$/1-html/16-IFrames.html" />
         <option value="$PROJECT_DIR$/1-html/17-HTML-Herausforderung.html" />
         <option value="$PROJECT_DIR$/12-python/helloworld.py" />
+        <option value="$PROJECT_DIR$/3-javascript/5-webseiteninhalte-anpassen.html" />
+        <option value="$PROJECT_DIR$/3-javascript/7-kreise-verschwinden-challenge.html" />
       </list>
     </option>
   </component>
@@ -77,8 +83,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="51" />
-    <option name="y" value="120" />
+    <option name="x" value="73" />
+    <option name="y" value="193" />
     <option name="width" value="1535" />
     <option name="height" value="798" />
   </component>
@@ -96,6 +102,11 @@
               <item name="web2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="web2.0" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="web2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="3-javascript" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -106,6 +117,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunDashboard">
@@ -134,16 +146,17 @@
       <workItem from="1561038008629" duration="3000" />
       <workItem from="1561114943821" duration="1675000" />
       <workItem from="1561117168204" duration="612000" />
+      <workItem from="1561392753591" duration="1781000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5270000" />
+    <option name="totallyTimeSpent" value="7051000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="120" width="1535" height="798" extended-state="0" />
+    <frame x="73" y="193" width="1535" height="798" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2440678" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24745762" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -245,5 +258,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/12-python/helloworld.py" />
+    <entry file="file://$PROJECT_DIR$/3-javascript/7-kreise-verschwinden-challenge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-404">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3-javascript/5-webseiteninhalte-anpassen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

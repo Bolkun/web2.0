@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+
+<body>
+	<p>Was ist das Zauberwort?</p>
+	
+	<p><input type="text" id="zauberwort"></p>
+	
+	<p><button id="zauberwortTesten">Eingabe</button></p>
+	
+	<script type="text/javascript">
+	   document.getElementById("zauberwortTesten").onclick = function() {
+	   
+		   var eingegebenesZauberwort = document.getElementById("zauberwort").value;
+		   var zauberwort = "abrakadabra";
+		   
+		   if(eingegebenesZauberwort == zauberwort){
+			   alert("Du darfst rein!")
+		   }else {
+			   alert("Nein, versuch's nochmal");
+		   }
+	   }
+	</script>
+</body>
+</html>

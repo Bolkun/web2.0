@@ -1,0 +1,32 @@
+<html>
+<head>
+
+</head>
+
+<body>
+    <p id="text">Hello World!</p>
+
+    <button id="myButton">Text aendern!</button>
+
+    <p id="zweiterParagraph">Javascript ist ...</p>
+
+    <button id="zweiterButton">Text aendern!</button>
+
+
+    <script type="text/javascript">
+
+
+        document.getElementById("myButton").onclick = function() {
+
+            document.getElementById("text").innerHTML = "<button>Text aendern!</button>";
+
+        };
+
+        document.getElementById("zweiterButton").onclick = function() {
+
+            document.getElementById("zweiterParagraph").innerHTML = "Ich finde " + document.getElementById("zweiterParagraph").innerHTML + " super" + "<button>Text aendern!</button>";
+
+        }
+    </script>
+</body>
+</html>

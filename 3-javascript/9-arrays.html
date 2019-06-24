@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+
+<body>
+	<input type="text" id="inhalt">
+	
+	<button id="ok">senden</button>
+	
+	<p id="array"></p>
+	
+	<script type="text/javascript">
+		
+		var myArray = new Array();    
+		
+		myArray[0] = "Pizza";
+		
+		myArray[1] = "Schokolade"
+		
+		
+		var tweets = ["Guten Morgen", "Ich liebe Kaffee"];
+		
+		tweets.push("Aufgeht's!");	//noch ein Element in array speichern
+		
+		tweets.splice(1, 0, "Hallo", "Wie geht's"); // Element in array am Position 1 löschen und am selbe position 2 neue El. fügen
+		//["Guten Morgen", "Hallo", "Wie geht's", "Ich liebe Kaffee", "Aufgeht's!"]
+		
+		tweets.reverse();	//umgekehrte reinfolge
+		
+		//console.log(tweets);
+
+		var neuerArray = tweets.join(myArray); //joined 0 zu 0, 1 zu 1
+		
+		console.log(neuerArray);
+		
+		document.getElementById("ok").onclick = function(){
+			tweets.push(document.getElementById("inhalt").value);
+			document.getElementById("array").innerHTML = tweets;
+		}
+	</script>
+</body>
+</html>

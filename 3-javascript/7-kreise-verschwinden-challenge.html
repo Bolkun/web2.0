@@ -1,0 +1,63 @@
+<html>
+<head>
+    <style type="text/css">
+        .kreis{
+            width:150px;
+            height:150px;
+            border-radius: 50%;
+            float:left;
+            margin-right: 50px;
+        }
+        #kreis-rot{
+            background-color: red;
+        }
+        #kreis-blau{
+            background-color: blue;
+        }
+        #kreis-gelb{
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="kreis" id="kreis-rot"></div>
+
+    <div class="kreis" id="kreis-blau"></div>
+
+    <div class="kreis" id="kreis-gelb"></div>
+
+    <button id="reset">RESET</button>
+
+    <script type="text/javascript">
+
+        document.getElementById("kreis-rot").onclick = function(){
+
+            document.getElementById("kreis-rot").style.display = "none";
+
+        }
+
+        document.getElementById("kreis-blau").onclick = function(){
+
+            document.getElementById("kreis-blau").style.display = "none";
+
+        }
+
+        document.getElementById("kreis-gelb").onclick = function(){
+
+            document.getElementById("kreis-gelb").style.display = "none";
+
+        }
+
+        document.getElementById("reset").onclick = function(){
+
+            document.getElementById("kreis-rot").style.display = "inline";
+
+            document.getElementById("kreis-blau").style.display = "inline";
+
+            document.getElementById("kreis-gelb").style.display = "inline";
+
+        }
+    </script>
+</body>
+</html>

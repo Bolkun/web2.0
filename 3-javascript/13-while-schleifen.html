@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+
+<body>
+	<p>Wie viele Finger haeltst du hoch?</p>
+
+	<p>
+		<select id="meineZahl">
+			<option>0</option>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>    
+		</select>
+	</p>
+	
+	<button id="versuche">Rate</button>
+	
+	<script type="text/javascript">
+		document.getElementById("versuche").onclick = function(){
+			
+			var meineZahl = document.getElementById("meineZahl").value;
+			
+			var erraten = false;
+			
+			var anzahlDerVersuche = 1;
+						
+			while(erraten == false) {
+				var schaetzung = Math.random();
+				schaetzung = schaetzung * 6;
+				schaetzung = Math.floor(schaetzung);
+				
+				if(schaetzung == meineZahl){
+					erraten = true;
+					alert("Ich hab's! Deine zahl ist " + schaetzung + " ich habe " +  anzahlDerVersuche + " versuche gebraucht!");
+					
+				}else {
+					anzahlDerVersuche++;
+				}
+			}
+		}
+	</script>
+</body>
+</html>
