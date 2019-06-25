@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>jQuery</title>
+	<link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+	
+	<style type="text/css">
+		#resizable {
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+	
+		#also {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+</head>
+
+<body>
+   <div id="draggable">Zieh mich zur Seite</div>
+	
+	<div style="width:400px;height:300px;background-color:yellow">
+		<span>Ich stecke fest!</span>
+	</div>
+	
+	<div id="resizable"></div>
+	
+	<div id="also"></div>
+	
+	<script type="text/javascript">
+	   $( "#draggable" ).draggable({ axis: "x" });    
+		
+		$("span").draggable({containment: "parent"});
+		
+		$( "#resizable" ).resizable({
+			grid:50,
+			alsoResize: "#also",
+			resize: function( event, ui ) {
+				if ($("#resizable").width() > 300) {
+					alert("gross genug!")
+				}
+			}
+		});
+		
+		$("#also").resizable();
+	</script>
+</body>
+</html>

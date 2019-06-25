@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Javascript</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<script src="jquery-3.4.1.min.js"></script>
+	<style type="text/css">
+	   #kreis{
+		   width: 150px;
+		   height: 150px;
+		   border-radius: 50%;
+		   background-color: green;
+		   margin: 10px;
+	   }
+	   
+	   #viereck{
+		   width: 150px;
+		   height:150px;
+		   background-color: red;
+		   margin: 10px;
+	   }
+	</style>
+</head>
+
+<body> 
+	<div id="kreis"></div>
+	
+	<div id="viereck"></div>
+	
+	<div id="viereck"></div>
+	
+	<script type="text/javascript">
+		$("#kreis").hover(function(){
+			$("#kreis").css("width", "400px");
+			$("#kreis").css("background-color", "red");
+		}); 
+		$("div").click(function(){
+			$(this).css("display", "none");
+			alert("Du hast " + $(this).attr("id") + " angeclicked.");
+		}); 
+	</script>
+</body>
+</html>

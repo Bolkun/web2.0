@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>Javascript</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+	
+	<style type="text/css">
+		#draggable { 
+			width: 100px; 
+			height: 100px; 
+			padding: 0.5em; 
+			float: left; 
+			margin: 10px 10px 10px 0; 
+		}
+	   
+		#droppable { 
+			width: 150px; 
+			height: 150px; 
+			padding: 0.5em; 
+			float: left; 
+			margin: 10px; 
+		}
+	</style>
+</head>
+
+<body>
+	<div id="draggable" class="ui-widget-content">
+		 <p>Zieh mich ins andere Viereck</p>
+	</div>
+
+	<div id="droppable" class="ui-widget-header">
+		<p>Lass mich hier fallen</p>
+	</div>     
+  
+	
+	<script type="text/javascript">
+		$( "#draggable" ).draggable();
+		$( "#droppable" ).droppable({
+			drop: function( event, ui ) {
+				alert("bin drin");
+			}
+		});
+		
+		$( "#droppable" ).droppable({
+			out: function( event, ui ) {
+				alert("bin draußen");
+			}                
+		});
+	</script>
+</body>
+</html>
