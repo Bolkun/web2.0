@@ -4,7 +4,12 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bb9df86-6cc3-4e0a-86f2-d68a08910cd6" name="Default Changelist" comment="" />
+    <list default="true" id="9bb9df86-6cc3-4e0a-86f2-d68a08910cd6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/7-php/MVC/app/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7-php/MVC/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7-php/mvc/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,21 +20,23 @@
     <session id="188421279">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
+          <entry key="htaccess" value="3" />
           <entry key="html" value="14" />
-          <entry key="php" value="3" />
+          <entry key="php" value="14" />
           <entry key="py" value="1" />
           <entry key="sql" value="1" />
         </counts>
@@ -38,17 +45,19 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="HTML" value="10" />
-          <entry key="PHP" value="3" />
+          <entry key="PHP" value="14" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="SQL" value="1" />
           <entry key="Svelte" value="2" />
+          <entry key="htaccess" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="390" />
+          <entry key="htaccess" value="159" />
           <entry key="html" value="157" />
-          <entry key="php" value="1244" />
+          <entry key="php" value="1455" />
           <entry key="py" value="30" />
           <entry key="sql" value="153" />
         </counts>
@@ -57,48 +66,49 @@
         <counts>
           <entry key="CSS" value="390" />
           <entry key="HTML" value="152" />
-          <entry key="PHP" value="1244" />
+          <entry key="PHP" value="1455" />
           <entry key="PLAIN_TEXT" value="30" />
           <entry key="SQL" value="153" />
           <entry key="Svelte" value="5" />
+          <entry key="htaccess" value="159" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/7-php/mvc/public/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/7-php/mvc/app/bootstrap.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/7-php/chat/index.php">
+        <entry file="file://$PROJECT_DIR$/7-php/mvc/app/libraries/Core.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+            <state>
+              <caret column="7" selection-start-column="7" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/7-php/chat/chat.php">
+        <entry file="file://$PROJECT_DIR$/7-php/mvc/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/7-php/chat/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/7-php/chat/db.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+            <state relative-caret-position="85">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -128,6 +138,21 @@
         <option value="$PROJECT_DIR$/7-php/chat/chat.php" />
         <option value="$PROJECT_DIR$/7-php/chat/style.css" />
         <option value="$PROJECT_DIR$/7-php/chat/index.php" />
+        <option value="$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/controllers/AdminController.php" />
+        <option value="$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/controllers/CartController.php" />
+        <option value="$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/controllers/CategoryController.php" />
+        <option value="$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/controllers/ProductController.php" />
+        <option value="$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/index.php" />
+        <option value="$PROJECT_DIR$/7-php/MVC/app/.htaccess" />
+        <option value="$PROJECT_DIR$/7-php/MVC/public/index.php" />
+        <option value="$PROJECT_DIR$/7-php/MVC/public/.htaccess" />
+        <option value="$PROJECT_DIR$/7-php/mvc/public/.htaccess" />
+        <option value="$PROJECT_DIR$/7-php/mvc/public/index.php" />
+        <option value="$PROJECT_DIR$/7-php/mvc/.htaccess" />
+        <option value="$PROJECT_DIR$/7-php/mvc/app/bootstrap.php" />
+        <option value="$PROJECT_DIR$/7-php/mvc/app/libraries/Core.php" />
       </list>
     </option>
   </component>
@@ -143,8 +168,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="39" />
-    <option name="y" value="60" />
+    <option name="x" value="-2" />
+    <option name="y" value="68" />
     <option name="width" value="1048" />
     <option name="height" value="798" />
   </component>
@@ -165,18 +190,28 @@
             <path>
               <item name="web2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="web2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="1-html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web2.0" type="462c0819:PsiDirectoryNode" />
               <item name="7-php" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="web2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="web2.0" type="462c0819:PsiDirectoryNode" />
               <item name="7-php" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="7-php" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="7-php" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -219,16 +254,20 @@
       <workItem from="1561117168204" duration="612000" />
       <workItem from="1561392753591" duration="1781000" />
       <workItem from="1561808912724" duration="9723000" />
+      <workItem from="1562012362808" duration="3000" />
+      <workItem from="1562062463154" duration="1442000" />
+      <workItem from="1562181319200" duration="3323000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16774000" />
+    <option name="totallyTimeSpent" value="21542000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="60" width="1048" height="798" extended-state="0" />
+    <frame x="-2" y="68" width="1048" height="798" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26923078" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28643724" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -351,6 +390,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/7-php/chat/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7-php/chat/chat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7-php/chat/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/7-php/chat/db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -358,24 +418,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/7-php/chat/chat.php">
+    <entry file="file://$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/controllers/CartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/controllers/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/7-php/chat/style.css">
+    <entry file="file://$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/controllers/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/7-php/chat/index.php">
+    <entry file="file://$PROJECT_DIR$/7-php/mvc/public/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+        <state relative-caret-position="85">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7-php/mvc/app/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7-php/cms_mvc_ecommerce_shop/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7-php/mvc/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7-php/mvc/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7-php/mvc/app/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7-php/mvc/app/libraries/Core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
