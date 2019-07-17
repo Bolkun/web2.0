@@ -1,0 +1,24 @@
+/*****get started*****/
+1. Download ruby and install: https://rubyinstaller.org/downloads/
+   check: ruby -v
+2. Open terminal: gem install sass 
+   OR: (sudo gem install sass)
+   check: sass -v
+3. Compile sass with comand line, codekit(kostenpflichtig), koala
+4. Go to Folder with Project
+   Compile sass: sass --watch style.sass:style.css
+
+Bourbon
+Install command line: (sudo) gem install bourbon
+		      (sudo) gem install bourbon -v 4.2.7
+Go to Folder: 5-frameworks/Bourbon
+		       bourbon install --path sass/0-plugins/
+Write in _plugins-dir.sass -> @import "bourbon/bourbon"
+
+tutorials
+https://www.youtube.com/watch?v=S4mPsoZ7sG4&list=PLUoqTnNH-2XxOt7UsKlTqbfrA2ucGosCR&index=3
+
+https://www.tutorialspoint.com/sass
+https://www.youtube.com/watch?v=aFWhf2wjJYo&list=PLUoqTnNH-2XxOt7UsKlTqbfrA2ucGosCR
+
+https://www.youtube.com/watch?v=vD-TfGXaxZQ&list=PLXyJ0pcaaZmAIYXSmv0ggeHlT3Cj9cq3T

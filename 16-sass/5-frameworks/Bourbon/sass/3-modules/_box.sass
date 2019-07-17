@@ -1,0 +1,29 @@
+// BOX
+
+.box
+  +size(280px 100px)
+  background: shade($teal, 10%)
+
+  color: white
+  border: solid 1px shade($teal, 20%)
+  box-sizing: border-box
+  text-align: center
+  line-height: 100px
+  float: left
+  margin: 0 $gutter 0 0
+
+  &:last-child
+    margin-right: 0
+
+  &:hover
+    +animation(wow 0.5s $ease-in-out-quint 1)
+
+// keyframes
+
++keyframes(wow)
+  0%
+    +transform(scale(1))
+  50%
+    +transform(scale(2) rotate(-6deg) )
+  100%
+    +transform(scale(1))

@@ -1,0 +1,3 @@
+sass --watch sass/app.sass:css/app.css
+// whole folder 
+sass --watch sass:css
