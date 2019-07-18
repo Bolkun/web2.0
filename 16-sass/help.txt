@@ -8,7 +8,7 @@
 4. Go to Folder with Project
    Compile sass: sass --watch style.sass:style.css
 
-Bourbon
+Bourbon framework
 Install command line: (sudo) gem install bourbon
 		      (sudo) gem install bourbon -v 4.2.7
 Go to Folder: 5-frameworks/Bourbon
