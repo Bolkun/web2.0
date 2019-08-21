@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @return mixed
+ * Implements hook_schema()
+ */
+function database_ex_schema() {
+
+  # Database example
+  $schema['database_ex'] = array(                   // Название таблицы
+    'description' => 'Database example',            // Описание таблицы
+    'fields' => array(                              // Массив с колонками таблицы
+      'id' => array(                                // Название колонки
+        'description' => 'ID',                      // Описание колонки
+        'type' => 'serial',                         // Тип данных
+        'unsigned' => TRUE,                         // Unsigned, по умолчанию FALSE
+        'not null' => TRUE,                         // Проверка на 0
+       ),
+      'uid' => array(
+        'description' => 'UID user',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,                             // Значение по умолчанию
+      ),
+      'text' => array(
+        'description' => 'Text',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'timestamp' => array(
+        'description' => 'Timestamp',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function database_ex_uninstall() {
+  # Remove table
+  \Drupal::state()->delete('database_ex.database_ex');
+}

@@ -1,0 +1,20 @@
+1. XML, TIFF
+2. Docker, Rancher, WebPack. Tracing
+3. node.js, npm
+4. automatisierte tests - selenium (Backbone api )
+    1) google chrome driver download for npm gulp
+    2) git bash -> npm run test -- --grep bs_keywordfacet.js
+    API -> seleniumhq.github.io/selenium/docs/api/javascript
+
+-Perl, Bash Scripting
+Udemy web 2.0
+1. Wordpress
+2. APIs
+3. Mobile Apps
+4. HTML5 CSS3 spezielle features
+O p t i o n a l
+5. PHP Interview Questions and answers
+6. Creative Sport Retouch - Create Dynamic Images in Photoshop!
+
+-hashing
+-prüfsumme

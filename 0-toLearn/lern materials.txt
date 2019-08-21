@@ -1,0 +1,15 @@
+https://skillbox.ru/php/		//junior - middle - senior
+https://habr.com/ru/post/260201/	//middle in 3 months
+https://coursehunters.net/cms/drupal	//basics and module development
+https://www.drupal.org/docs/8/creating-custom-modules	//Creating custom modules
+https://www.youtube.com/watch?v=tmT6CATUWbk
+https://www.drupal.org/docs/8/creating-custom-modules/basic-structure
+
+DELETE all Content from a Node http://karimboudjema.com/en/drupal/20190109/10-helpful-drupal-8-modules-2019
+http://drupal-entity-training.github.io/event/
+https://www.computeruniverse.net/de/acer-predator-orion-9000-dge16eg007-tower-pc-mit-windows-10-inkl-rtx-triple-threat-bundle-nur-f-neuware?utm_channel=psm&utm_source=idealo&utm_campaign=cpc&utm_medium=katalog&utm_content=artikel&agt=509&acode=psm319i
+Ing.-Büro für IT, Michael Mayer
+https://www.ebay.de/itm/GAMER-PC-Intel-I9-9900k-8x-bis-5-0Ghz-32GB-1000GB-SSD-8GB-RTX-2080/254178290054?hash=item3b2e34e986:g:xqwAAOSw~SJckO5w
+Comet/PHPFramework
+https://de.slideshare.net/kingfoo/implementing-comet-using-php
+https://de.slideshare.net/pcdinh/how-to-learn-to-build-your-own-php-framework-presentation

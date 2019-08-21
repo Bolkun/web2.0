@@ -1,0 +1,10 @@
+Защититься еще проще, чем использовать уязвимость. Просто фильтруйте данные. Если Вы передаёте числа, используйте
+$id = (int) $_GET['id'];
+
+Как подсказал пользователь malroc. Защищаться использованием PDO или prepared statements.
+
+$name=mysql_real_escape_string($name);
+$age=mysql_real_escape_string($age);
+$query="INSERT INTO table (name,age,class) VALUES ('$name','$age',11)";
+или:
+$query="SELECT * FROM table WHERE name LIKE '".mysql_real_escape_string($_GET['name'])."%'";

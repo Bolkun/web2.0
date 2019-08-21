@@ -1,0 +1,63 @@
+WIN10
+Sprache fügen	     ->	Start > Einstellungen > Zeit & Sprache > Sprache.
+File extension sehen -> DieserPC > Ansicht > Dateinamenerweiterungen hacke setzen
+Dieser PC icon	     -> Start > Einstellungen > Personalisierung > Designs > Desktopsymboleinstellungen
+PHPStorm theme	     -> File -> Settings -> Apperiance -> Darcula
+PHP test Version     -> Create Ordner Test > Create index.php > fill <?php echo 'Current PHP version: ' . phpversion(); phpinfo();?>
+TortoiseGit
+GIT Bash(2.20)	     -> Install -> go to htdocs -> rechte Mausetaste -> Git Bash Here
+Composer (1.8.4)     -> https://getcomposer.org/download/  (link:  Composer-Setup.exe)
+Git Bash command:    -> gibt Path zurück: which git
+		     -> DieserPC -> Rechte MouseTaste -> Einstellungen -> Erweiterte Systemeinst.(User Variables) -> dort Path C:\Users\serhiy.bolkun\AppData\Roaming\Composer\vendor\bin
+		     -> restart cmd (and type git in cmd)	
+		     -> Commands: composer install
+		                  composer --version
+				  git config --global user.name "John Doe"
+                                  git config --global user.email johndoe@example.com	
+Git Bash command:    -> vendor/bin/drush list | grep pm
+			Ausgabe:   pm:security (sec)                          Check Drupal Composer packages for pending
+   				   pm:enable (en)                             Enable one or more modules.
+   				   pm:uninstall (pmu)                         Uninstall one or more modules and their dep
+   				   pm:list (pml)                              Show a list of available extensions (module
+                        vendor/bin/drush cache:rebuild (cr, rebuild)  
+Drush			1)Install Drush after Composer
+			2)Git Bash open: command: composer global require drush/drush:8.*
+			3) DieserPC -> Rechte MouseTaste -> Einstellungen -> Erweiterte Systemeinst.(User Variables) -> dort Path zufügen in Path C:\Users\serhiy.bolkun\AppData\Roaming\Composer\vendor\drush\drush
+			Git Bash neu starten Command: drush
+			command line shell and Unix scripting interface for Drupal
+			-> link: http://docs.drush.org/en/master/
+			-> documentation: https://www.drush.org/api/master/	
+			
+----------------------------------------------------------------------------
+Drupal project		php version ab 7.0	
+Compile		->	http://localhost/project/
+
+DB kaputt		In Bash
+			drush cr	(cache leeren)
+			drush updb	(update database)
+			drush entup	(update entities)
+
+			Export DB
+			drush sql-dump
+			
+			Import DB
+			drush sqlc < /c/temp/db.sql
+-----------------------------------------------------------------------------
+PHPStorm		Find path in dir -> close with ESC
+			strg + mouse -> opens function definition
+			Install Plugins: File->Settings->Plugins->Browse repositories
+			List(Drupal Symfony Bridge, PHP composer.json support, Php Inspections (EA Extended), PHPUnit Enhancement, BashSupport)
+
+------------------------------------------------------------------------------
+PHPStan
+So können wir PHPStan unter Windows aufrufen:
+	1)Git-Bash öffnen
+	2)$ cd /c/xampp/htdocs/project-name && vendor/bin/phpstan analyze web/modules/project-name
+------------------------------------------------------------------------------
+PHPUNIT			vendor/bin/phpunit --version
+tests durchführen	cd web
+			SIMPLETEST_DB='mysql://root@localhost/test' ../vendor/bin/phpunit -c core/phpunit.xml.dist modules/project/
+------------------------------------------------------------------------------
+PhantomJS		drush sqlc < /c/temp/dbNewReports.sql && drush cr && clear && ./test.sh KommentareMesswerteingabeseite.js
+			gzip -dc dbReports.sql.gz | drush sqlc && drush updb -y && drush entup -y && 			clear		
+------------------------------------------------------------------------------

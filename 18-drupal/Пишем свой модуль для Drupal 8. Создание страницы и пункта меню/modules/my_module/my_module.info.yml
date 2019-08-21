@@ -1,0 +1,4 @@
+name: 'My module'
+description: 'Create page in drupal 8'
+core: 8.x
+type: module

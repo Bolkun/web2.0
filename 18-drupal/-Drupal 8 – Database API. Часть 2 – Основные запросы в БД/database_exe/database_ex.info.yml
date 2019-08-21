@@ -1,0 +1,5 @@
+name: Database exe
+description: Данный модуль демонстрирует использование Database API в Drupal 8
+core: 8.x
+package: Other
+type: module

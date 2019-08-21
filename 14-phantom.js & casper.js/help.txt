@@ -1,0 +1,3 @@
+PhantomJS		drush sqlc < /c/temp/dbNewReports.sql && drush cr && clear && ./test.sh 			KommentareMesswerteingabeseite.js
+			gzip -dc dbReports.sql.gz | drush sqlc && drush updb -y && drush entup -y && 					clear		
+------------------------------------------------------------------------------

@@ -1,0 +1,7 @@
+my_module.routing:
+  path: '/hello'
+  defaults:
+    _title: 'My Module'
+    _controller: '\Drupal\my_module\Controller\MyModuleController::test'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,30 @@
+repository von projekt git bash offnen
+commands:
+	gzip -dc tests/PhantomJS/dbGuetezeichen.sql.gz | `vendor/bin/drush sql:connect`
+	vendor/bin/drush cr
+	vendor/bin/drush init
+	echo @php c:/xampp/htdocs/oequasta/vendor/drush/drush/drush %* > /c/xampp/htdocs/oequasta/vendor/drush/drush/drush.bat
+	vendor/bin/drush updb -y
+	vendor/bin/drush entup -y
+	gzip -dc tests/PhantomJS/dbGuetezeichen.sql.gz | `vendor/bin/drush sql:connect`
+---------------------------------------------------------------------------------------------
+cmd -> wechseln pfad zu C:\xampp\htdocs\oequasta\web\sites\default
+	Command: drush (gibt commands aus)
+                       user-login (uli)      Display a one time login link for the given user account (defaults to uid 1).
+ 		       user-password (upwd)  (Re)Set the password for the user account with the specified name.
+	
+---------------------------------------------------------------------------------------------
+Bash
+cat dbGuetezeichen.sql | mysql -u root oequasta-remove
+---------------------------------------------------------------------------------------------
+DB-Kaputt
+drush cr
+git pull
+composer update
+(in phpmyadmin database dropen und neue anlegen)
+drush sqlc < /c/temp/db.sql
+drush updb
+drush entup
+---------------------------------------------------------------------------------------------
+Cache Rebuild
+drush entup  -> yes -> Reload the Page

@@ -1,0 +1,6 @@
+my_module.link:
+  title: 'My Module'
+  description: 'Example Link'
+  menu_name: main
+  route_name: my_module.routing
+  weight: 100

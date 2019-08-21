@@ -1,0 +1,116 @@
+git -------------------------------------------------------
+https://wiki.quodata.de/index.php?title=Delphi_VM
+-------------------------------------------------------
+Open Git Bash
+
+cd Documents/GitHub
+git clone https://git04.quodata.de/it/oequasta.git	(auto create repository)
+
+--Work with Project
+
+git pull --branch
+
+git status	(red)
+git add .
+git status	(green)
+git commit -m "#1005 Codegesundheit: KalenderConfigForm soll eigene Config bekommen"
+git push -u origin master
+------------------------------------------------------------------------------------
+REMOVE LAST COMMIT
+git reset --hard HEAD^
+-----------------------------------------------------------------------------------
+Pipeline Failed
+https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+(statt master reviewed-code-for-screenshots !!!!!!!!!!!!!!!!!!!!!!!!!!!!)
+
+git checkout reviewed-code-for-screenshots
+git fetch origin
+git reset --hard origin/reviewed-code-for-screenshots
+git checkout -b new-feature
+git commit
+git push -u origin new-feature
+-------------------------------------------------------------------------------------
+Branch Ändern
+-Git Bash in Projekt öffnen (externe automatisch erkennt)
+-git pull
+(git pull origin <my_default_branch_name>)
+-git branch 969-Zielwerttabelle_Struktur_Aendern
+-git branch -a (shows all branches)
+-git checkout reviewed-code-for-screenshots	(git checkout -b branch) anleft und wechselt
+-git pull
+-git checkout -b <neue branch>
+-git commit -p <y or n>
+-gitk (zeigt graph)
+-------------------------------------------------------------------------------------
+wenn der Branch neu ist dann
+-git push -u origin 960-das_neuste_Jahr_im_select_anzeigen
+url copy und merge request einlegen (Kommentar in merge request: ready for review)
+-------------------------------------------------------------------------------------
+DELETE A BRANCH FROM A LIST
+https://makandracards.com/makandra/621-git-delete-a-branch-local-or-remote
+git branch -D 976-Screenshottest_fuer_Aenderungsmitteilung
+-------------------------------------------------------------------------------------
+GIT IGNORE
+git rm --cached <filename>
+git diff
+-------------------------------------------------------------------------------------
+vorherige commit ersetzen mit neuen commit
+git commit -p --amend
+git push --force
+-------------------------------------------------------------------------------------
+Löschen des letzten Commit
+$ git reset HEAD^ --hard
+$ git push origin -f
+-------------------------------------------------------------------------------------
+Update Composer
+composer update
+git co reviewed-code-for-screenshots
+git pull
+composer update
+vendor/bin/phpstan analyze web/modules/quodata
+-----------------------------------------------------------------------------------
+Um git push -u origin <Branch Name>
+git config --global push.default current
+------------------------------------------------------------------------------------
+/*
+Falsch oder viel commited auf 1 branch
+*/
+git Bash in entsprechende Repository öffnen
+Commands:		git stash
+			git fetch && git rebase origin/reviewed-code-for-screenshots -i
+(zeigt änderungen)	git diff
+(löscht änderunge)	git reset --hard
+			git fetch && git rebase origin/reviewed-code-for-screenshots -i
+erste Zeile staat pick command eingeben -> close Notepad++
+(z.B. r f9a5b26d0 config aerztekammer_aenderungsmitteilung geändert, damit Modulname zu Config-Entity-Namen passt)
+(rename comment to commit)
+			git push -f
+-------------------------------------------------------------------------------------
+Project Aktualisieren
+git co reviewed-code-for-screenshots --force
+git pull --force	
+git fetch
+git reset --hard origin/reviewed-code-for-screenshots
+rm .idea/oequasta.iml
+git reset --hard origin/reviewed-code-for-screenshots
+git pull
+-------------------------------------------------------------------------------------
+Merge Conflikte
+git co 1045-Test_fuer_alle_Tabellen_die_in_Programm_vorkommen
+git pull
+git rebase origin/reviewed-code-for-screenshots
+git add test.sh
+git rebase --continue
+git push --force
+-------------------------------------------------------------------------------------
+Rebase
+git checkout 1046-bla_bla
+git rebase origin/reviewed-code-for-screenshots
+(Datei bearbeiten)
+git commit -p --amend
+git push -f
+-------------------------------------------------------------------------------------
+Nebenbei
+-Discussions Resolved nach dem Änderungen
+-Erste Commit Nachricht unter 78 Zeichen, ggf. neue Zeile
+-

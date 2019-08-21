@@ -1,0 +1,3 @@
+BelegNr;LaborNr;VNr;P1 neg;P1 pos;P1 grenz;P2 neg;P2 pos;P2 grenz;P3 neg;P3 pos;P3 grenz;P4 neg;P4 pos;P4 grenz;P5 neg;P5 pos;P5 grenz;P1/A;P2/B;P3/C;P4/D;P5/E;Hneg;Hgrenz gg;Hgrenz kg;Hpos;IMAGE
+0801;1234;068;1;0;0;0;0;1;0;0;1;0;0;1;0;0;1;0,8;92,1;16,0;16,9;171,1;4,9;4,9;9,9;10,0;0801_068_1904.tif
+0801;1235;068;1;0;0;0;0;1;0;0;1;0;0;1;0;0;1;,7;98;16,2;16,4;173,;4,9;4,9;9,9;10;0801_068_3522.tif
