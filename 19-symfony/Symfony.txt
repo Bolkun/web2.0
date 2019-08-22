@@ -1,0 +1,106 @@
+--------------------------------------Symfony 4 on Windows 10
+1. Download Xampp -> 7.2.12 / PHP 7.2.12 (32 bit) for Windows (https://www.apachefriends.org/de/download.html)
+2. Check if composer installed
+	-open Terminal and type: composer --version
+	-not found: https://getcomposer.org
+		-Download  Composer-Setup.exe
+	-close Terminal and open again, type composer --version (working! version 1.7.3)
+	
+3. In Terminal type: cd /
+		     cd xampp/htdocs
+                     composer create-project symfony/skeleton symfony-project
+4.                   cd symfony-project
+5.(create git rep.)  git init
+6.(install dev. web server) composer require server --dev
+7.(run project)	     php bin/console server:run
+8.Open Browser and type: http://127.0.0.1:8000
+9. Download PHP-Storm (Open Project)
+	File -> Settings... -> Plugins -> [Browse repositories...] -> type: symfony -> Symfony Plugin (PHP Annotation and PHP Toolbox) install -> restart php-storm
+	File -> Settings... -> type: symfony -> Enable Plugin for this Project 						
+10. Open new Terminal for GIT configuration
+    type: 	cd /
+		cd xampp/htdocs/symfony-project
+		git add .
+		git status
+		git commit (or git commit -m "Initial commit")
+	Enter in the first line a comment: leer Symfony Project
+11. File -> Settings.. ->Languages & Frameworks -> PHP -> CLI Interpreter [...] - C:\xampp\php\php.exe
+12. icons for all Browser schould work !!!
+
+-------------------------------------First Page
+
+Page consists of 1) a route (configuration that say what the URL is)
+		 2) a controller (a function that builds the page)
+1. config -> routs.yaml
+Type:
+index:
+    path: /
+    controller: App\Controller\GenusController::showAction
+
+2. Start with a 2) -> src -> Controller (Create new PHP class) Example: GenusController
+
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Besitzer
+ * Date: 24.11.2018
+ * Time: 18:47
+ */
+
+namespace App\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+class GenusController
+{
+    public  function  showAction()
+    {
+        //the Controller function (build a page)
+        return new Response('Under the Sea!');
+    }
+}
+
+-> by calling http://127.0.0.1:8000 (we see 'Under the Sea!')
+
+3. in terminal type: composer require annotations 
+this is for writing Route comments
+4. comment everything in routes.yaml
+#index:
+#    path: /
+#   controller: App\Controller\GenusController::showAction
+
+class GenusController
+{
+    /**
+     * @Route("/")
+     */
+    public  function  showAction()
+    {
+        //the Controller function (build a page)
+        return new Response('Under the Sea!');
+    }
+
+    /**
+     * @Route("/fitness")
+     */
+    public  function  showFitness()
+    {
+        return new Response('I am pumping Iron!');
+    }
+
+    public  function  showFitnessNews($slug)
+    {
+        //what can we do with Route ?
+        //match regular expressions
+        //http methods
+        //host names
+        return new Response(sprintf(
+            'All Fitness News! Exactly %s',
+            $slug
+        ));
+    }
+}
+
+-> by calling http://127.0.0.1:8000 (we see 'Under the Sea!')
+-> by calling http://127.0.0.1:8000/fitness (we see 'I am pumping Iron!')

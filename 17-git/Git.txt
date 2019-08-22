@@ -1,10 +1,15 @@
-git -------------------------------------------------------
-https://wiki.quodata.de/index.php?title=Delphi_VM
+Git Bash command:    -> gibt Path zurück: which git
+		     -> DieserPC -> Rechte MouseTaste -> Einstellungen -> Erweiterte Systemeinst.(User Variables) -> dort Path C:\Users\serhiy.bolkun\AppData\Roaming\Composer\vendor\bin
+		     -> restart cmd (and type git in cmd)	
+		     -> Commands: composer install
+		                  composer --version
+				  git config --global user.name "John Doe"
+                                  git config --global user.email johndoe@example.com	
 -------------------------------------------------------
 Open Git Bash
 
 cd Documents/GitHub
-git clone https://git04.quodata.de/it/oequasta.git	(auto create repository)
+git clone https://git04.quodata.de/it/project	(auto create repository)
 
 --Work with Project
 

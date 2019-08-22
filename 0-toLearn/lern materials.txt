@@ -13,3 +13,4 @@ https://www.ebay.de/itm/GAMER-PC-Intel-I9-9900k-8x-bis-5-0Ghz-32GB-1000GB-SSD-8G
 Comet/PHPFramework
 https://de.slideshare.net/kingfoo/implementing-comet-using-php
 https://de.slideshare.net/pcdinh/how-to-learn-to-build-your-own-php-framework-presentation
+test
