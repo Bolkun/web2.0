@@ -1,0 +1,18 @@
+Plugins
+-Rainbow Brackets
+-PHP Annotations
+
+Reformatt code Ctrl+Shift+Alt+L (ALT+Shift+L)
+
+
+
+
+Nutzliche Plugins:
+
+Drupal Symfony Bridge
+	hier muss explizit fur jedes Projekt die Unterstutzung aktiviert werden: Languages & Frameworks > PHP > Symfony
+PHP composer.json support
+Php Inspections (EA Extended)
+	die QD besitzt einige Lizenzen und kauft gern weitere - bitte unbedingt Bescheid geben.
+PHPUnit Enhancement
+	BashSupport z.B. fur die .sh-Dateien in unserer Test-Automatisierung:

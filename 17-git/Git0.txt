@@ -1,0 +1,14 @@
+Open Git Bash
+
+cd Documents/GitHub
+git clone https://git04.quodata.de/it/project-name.git	(auto create repository)
+
+--Work with Project
+
+git pull --актуализировать
+
+git status	(red)
+git add .
+git status	(green)
+git commit -m "#1005 Codegesundheit: KalenderConfigForm soll eigene Config bekommen"
+git push -u origin ветка

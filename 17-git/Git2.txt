@@ -1,0 +1,20 @@
+-git bash download
+-github + project prepared
+-c/xampp/htdocs git bash here
+	git clone https://github.com/Bolkun/PHP-Conways-Game-of-Life.git
+	cd PHP-Conways-Game-of-Life (master)
+	git branch
+-edit files
+	git status (files being modified)
+	git diff   (modification in a code)
+	git branch 1-Warning_Only_Backend_programmed
+	git commit -p (y ,write comment: "Warning: Only Backend programmed!", close, save editor)
+
+	git push
+	git push --set-upstream origin 1-Warning_Only_Backend_programmed
+Login to Github: User-Name
+Password:	 ********
+(Merge request)
+remote:      https://github.com/User-Name/PHP-Conways-Game-of-Life/pull/new/3-Made_by_Serhiy_Bolkun
+	git checkout master
+	git branch -d 1-Warning_Only_Backend_programmed

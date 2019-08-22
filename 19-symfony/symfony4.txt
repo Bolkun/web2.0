@@ -1,0 +1,18 @@
+php -v
+composer -v
+composer create-project symfony/website-skeleton lets-explore-symfony-4
+git init
+(git status)
+git add .
+git commit -m "init"
+
+Run Server: php -S 127.0.0.1:8000 -t public
+Browser: http://127.0.0.1:8000
+Symfony4 Commends: php bin/console
+
+composer require server --dev
+Run Server(better): bin/console server:run
+Show all Routs: bin/console debug:router
+Show all Makes: bin/console make
+		bin/console make:controller
+			WelcomeController
