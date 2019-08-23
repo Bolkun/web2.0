@@ -1,0 +1,187 @@
+#!/bin/bash
+$host                                                            #ilux150, isys1..22, 146a
+$user                                                            #s73953, s....., robge
+$month                                                           #monatskurzel
+alle_isys="isys1 isys2 isys3 isys4 isys5 isys6 isys7 isys8 isys9 isys10 isys11 isys12 isys13 isys14 isys15 isys16 isys17 isys18 isys19 isys20 isys21 isys22"
+path=/var/log/wtmp*
+
+rechner()
+{
+        if [ $? -eq 0 ]; then
+                echo rechner erreichbar
+        else
+                echo rechner nicht erreichbar
+                exit 1
+        fi
+}
+raum_146a()
+{
+        for x in $alle_isys
+        do
+                ping -c 1 $x &>/dev/null
+                if [ $? -eq 0 ]; then
+                        echo $x erreichbar
+                else
+                        echo $x nicht erreichbar
+                        exit 1
+                fi
+        done
+}
+nutzer()
+{
+        if [ $? -eq 0 ]; then
+                echo nutzer existiert
+        else
+                echo nutzer existiert nicht
+                exit 1
+        fi
+}
+monat()
+{
+        if [ "$1" == "Jan" -o "$1" == "Feb" -o "$1" == "Mar" -o "$1" == "Apr" -o "$1" == "May" -o "$1" == "Jun"  -o "$1" == "Jul"  -o "$1" == "Aug"  -o "$1" == "Sep" -o "$1" == "Oct"  -o "$1" == "Nov" -o "$1" == "Dec" ]; then
+                echo monatskurzel ist korrekt
+else
+                echo monatskurzel nicht korrekt
+                echo geben sie in form: Jan, Feb, Mar ...
+                exit 1
+        fi
+}
+#sinvolle gedanke
+#kein parameter -> exit
+if [ $# -lt 3 ]; then
+        echo usage: $0 \<host\> \<user\> \<month\>
+        exit 1
+fi
+#mehr als 3 parameter -> warning
+if test $BASH_ARGC -gt 3
+then
+        echo $0: ignorieren parameter nach $3
+fi
+#alles in minuten ausgeben
+all_minuten()
+{
+        let all_min="$tage*1440+$stunde*60+$minute"
+        echo alles in minuten ausgeben: $all_min
+}
+#konvertierung der zeit von minuten nach tage, stunden, minuten
+konvertierung()
+{
+        let new_min="$all_min%60"
+        let all_std="$all_min/60"
+        let new_std="$all_std%24"
+        let new_tag="$all_std/24"
+}
+#konvertierung der zeit von minuten nach tage, stunden, minuten für 146a
+konvertierung_146a()
+{
+        let new_min="$all_min_146a%60"
+        let all_std="$all_min_146a/60"
+        let new_std="$all_std%24"
+        let new_tag="$all_std/24"
+}
+
+#endergebnis
+end_ergebnis()
+{
+        name=$(ssh $1 "finger $2" | grep 'Name:' | cut -f4 | cut -c 7-)
+        let all_min="$tage*1440+$stunde*60+$minute"
+        echo $name war in $3 an der Zielrechner $1 insgesammt $all_min Minuten "($new_tag+$new_std:$new_min)" eingeloggt.
+}
+ergebnis_146a()
+{
+        name=$(ssh ilux150 "finger $2" | grep 'Name:' | cut -f4 | cut -c 7-)
+        let all_min="$tage*1440+$stunde*60+$minute"
+        echo $name war in $3 insgesammt $all_min_146a Minuten "($new_tag+$new_std:$new_min)" in der Labor $1 eingeloggt.
+}
+#main
+#prüfen, ob rechner erreichbar ist
+# 1) ilux150 und isys{1..22}
+if [ "$1" != "146a" ]; then
+        ping -c 1 $1 &>/dev/null
+        rechner
+        #prüfen, ob Nutzer auf dem Zielrechner gibt
+        id $2 &>/dev/null
+        nutzer
+        #prüfen, ob Monatskurzel korrekt ist
+        monat $3
+        #ordner einlegen
+        mkdir mktemp
+        #dateien copieren
+        scp $1.informatik.htw-dresden.de:$path mktemp 2>/dev/null
+        #dateien entpacken
+        unxz mktemp/wtmp*.xz
+        #alle dateien in eine umschreiben
+        cat mktemp/wtmp* >> mktemp/wtmp-all
+#########wtmp-all -> bearbeiten
+        #tage
+        tage=$(last -f mktemp/wtmp-all grep $2 | grep $3 | grep -o "([[:digit:]]*[+]" | tr -d '(' | tr -d '+' | gawk '{sum_tage+=$tage} END{print sum_tage}')
+        #falls keine tage gibt
+        let tage+=0
+        echo tagen: $tage
+        #stunde
+        stunde=$(last -f mktemp/wtmp-all grep $2 | grep $3 | grep -o "[[:digit:]]*[:][[:digit:]]*)" | grep -o "[[:digit:]]*[:]" | tr -d ':' | gawk '{sum_stunde+=$stunde} END{print sum_stunde}')
+        #falls keine stunde gibt
+        let stunde+=0
+        echo stunden: $stunde
+        #minute
+        minute=$(last -f mktemp/wtmp-all grep $2 | grep $3 | grep -o "[[:digit:]]*)" | tr -d ')' | gawk '{sum_minute+=$minute} END{print sum_minute}')
+        #falls keine minute gibt
+        let minute+=0
+        echo minuten: $minute
+        #verzeichnis entfernen
+        rm -r mktemp
+        all_minuten
+        konvertierung
+        end_ergebnis $1 $2 $3
+fi
+# 2) 146a
+if [ "$1" == "146a" ]; then
+        raum_146a
+        #prüfen, ob Nutzer auf dem Zielrechner gibt
+        id $2 &>/dev/null
+        nutzer
+        #prüfen, ob Monatskurzel korrekt ist
+        monat $3
+        #jeder einzelne isys rechner durchgehen
+        for y in $alle_isys
+        do
+                #ordner einlegen
+                mkdir mktemp
+                #dateien copieren
+                scp $y.informatik.htw-dresden.de:$path mktemp 2>/dev/null
+                #dateien entpacken
+                unxz mktemp/wtmp*.xz
+                #alle dateien in eine umschreiben
+                cat mktemp/wtmp* >> mktemp/wtmp-all
+        #########wtmp-all -> bearbeiten
+                echo "<"\($y\)">"
+                #tage
+                tage=$(last -f mktemp/wtmp-all grep $2 | grep $3 | grep -o "([[:digit:]]*[+]" | tr -d '(' | tr -d '+' | gawk '{sum_tage+=$tage} END{print sum_tage}')
+                #falls keine tage gibt
+                let tage+=0
+                echo tagen: $tage
+                #stunde
+                stunde=$(last -f mktemp/wtmp-all grep $2 | grep $3 | grep -o "[[:digit:]]*[:][[:digit:]]*)" | grep -o "[[:digit:]]*[:]" | tr -d ':' | gawk '{sum_stunde+=$stunde} END{print sum_stunde}')
+                #falls keine stunde gibt
+                let stunde+=0
+                echo stunden: $stunde
+                #minute
+                minute=$(last -f mktemp/wtmp-all grep $2 | grep $3 | grep -o "[[:digit:]]*)" | tr -d ')' | gawk '{sum_minute+=$minute} END{print sum_minute}')
+                #falls keine minute gibt
+                let minute+=0
+                echo minuten: $minute
+                all_minuten
+                #alle minuten von isys{1..22} in einer Datei zusamenfassen
+                echo $y = $all_min >> isys.txt
+                #verzeichnis entfernen
+                rm -r mktemp
+        done
+        all_min_146a=$(cut -d ' ' -f 3- isys.txt | gawk '{sum_all_min+=$min} END{print sum_all_min}')
+        #isys.txt entfernen
+        rm isys.txt
+        echo insgesammt: $all_min_146a
+        konvertierung_146a
+        ergebnis_146a $1 $2 $3
+fi
+#epiloge
+exit 0

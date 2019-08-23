@@ -1,0 +1,53 @@
+<div class="fc-bar-header <?php if (isset($header_class_alternative)) echo $header_class_alternative; ?>">
+    <div class="fc-bar-header-inner clearfix">
+        <div class="fc-logo">
+            <span class="sr-only">Formcycle</span>
+            <a href="<?php echo $base_url; ?>startseite#top" title="Startseite">
+                <img data-toggle="tooltip" data-placement="bottom" class="img-responsive" src="<?php echo $base_url; ?>assets/dist/img/content/logos/logo-formcycle.svg" width="170" height="17" alt="Logo Formcycle" title="Formcycle" />
+            </a>
+        </div>
+        <div class="fc-menu">
+            <button onclick="loadBeratungFormular('<?php echo $current_lang; ?>');" class="btn btn-primary hidden-xs" data-toggle="modal" data-target="#modal-contact">Beratung anfordern</button>
+            <a class="tel-header" href="tel:+490351810500" title="App öffnen">+49 (0)351 81050 - 0</a>
+            <?php //@todo: klasse fÃ¼r farbe anlegen ?>
+            <a href="<?php if($current_page=='startseite'){ $current_page='startpage';} echo "en/$current_page"; ?>" style="color:#ff031c;" title="Reload a page with certain language">EN</a>
+            <button class="btn-link fc-menu-toggle">
+                <i class="icon-menu"><p style="display: none;">Menu</p></i>
+            </button>
+        </div>
+    </div>
+</div>
+<script>
+function loadBeratungFormular(values) {	//de/en
+	var formId = 2942;
+ 	var myBase = 'https://www.formcycle.de/';
+ 	var fcBase = 'https://pro.formcloud.de/formcycle';
+ 	var myFormContainer = $('#fc-form-contact');
+   
+ 	var form = $.ajax({
+  		type: "GET",
+		url: fcBase + '/form/provide/' + formId,
+  		data:{
+   			//Render-Parameter
+			"lang": values,
+   			"xfc-rp-inline":true,      //Verwendete resourcen auflösen 
+   			"xfc-rp-form-only":true,     //Formular ohne HTML, BODY etc.
+   			"xfc-rp-usejq":false,       //jQuery einbinden
+   			"xfc-rp-keepalive":false,     //Ping zur Sessionverlängerung 
+   			"xfc-rp-usecss":true,      //Use Formcycle CSS files
+   			"xfc-rp-useui":true,      //jQueryUI einbinden
+   			//Prozess-Parameter
+   			"xfc-pp-external":true,      //Externer Formularrequest
+   			"xfc-pp-base-url":fcBase,      //URL zum FormCycle
+   			"xfc-pp-success-url": myBase + "/anfrage-versendet.html", //CMS Seite bei erfolg
+   			"xfc-pp-error-url": myBase + "/anfrage-fehler.html"   //CMS Seite bei Fehler  
+  		},
+  		cache: false,
+  		async: false,
+  		success:function(html){ 
+   			myFormContainer.html(html);
+  		},
+  	crossDomain: true
+ 	});	    
+}
+</script>
