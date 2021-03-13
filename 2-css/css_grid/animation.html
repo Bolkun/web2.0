@@ -1,0 +1,92 @@
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 100px;
+        grid-gap: 20px;
+        transition: all 1s;
+    }
+
+    .item {
+        background-color: tomato;
+        border-radius: 5px;
+        color: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .grid--full {
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 200px;
+        grid-gap: 10px;
+    }
+
+    button {
+        background-color: #123456;
+        color: #ffffff;
+        margin: 2rem 0;
+        padding: 1.4rem;
+        border: none;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+    }
+
+    dt {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+</style>
+
+<p>Check <a href="https://codepen.io/matuzo/post/animating-css-grid-layout-properties">this post</a> for more details
+</p>
+
+<button class="js-button">Animate</button>
+
+<div class="grid js-grid">
+    <article class="item">
+        <h2>Element 1</h2>
+    </article>
+    <article class="item">
+        <h2>Element 2</h2>
+    </article>
+    <article class="item">
+        <h2>Element 3</h2>
+    </article>
+    <article class="item">
+        <h2>Element 4</h2>
+    </article>
+    <article class="item">
+        <h2>Element 5</h2>
+    </article>
+    <article class="item">
+        <h2>Element 6</h2>
+    </article>
+    <article class="item">
+        <h2>Element 7</h2>
+    </article>
+    <article class="item">
+        <h2>Element 8</h2>
+    </article>
+    <article class="item">
+        <h2>Element 9</h2>
+    </article>
+    <article class="item">
+        <h2>Element 10</h2>
+    </article>
+    <article class="item">
+        <h2>Element 11</h2>
+    </article>
+    <article class="item">
+        <h2>Element 12</h2>
+    </article>
+</div>
+
+<script>
+    document.querySelector('.js-button').addEventListener('click', function () {
+        console.log('test')
+        document.querySelector('.js-grid').classList.toggle('grid--full')
+    })
+</script>
