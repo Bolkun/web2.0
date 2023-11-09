@@ -1,0 +1,36 @@
+CREATE TABLE `s_articles` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `description` mediumtext COLLATE utf8_unicode_ci,
+  `shippingtime` varchar(11) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `datum` date DEFAULT  NULL,
+  `active` int(1) unsigned NOT NULL DEFAULT '0',
+  `topseller` int(1) unsigned NOT NULL DEFAULT '0',
+  `changetime` datetime NOT NULL,
+  `price` float unsigned DEFAULT  NULL,
+  `stock` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+CREATE TABLE `s_categories` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `parent` int(11) unsigned DEFAULT NULL,
+  `image`  varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description`  varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `active`  int(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+ALTER TABLE s_articles ADD `parent` int(11) unsigned NOT NULL;
+
+INSERT INTO `s_articles` (name, description, shippingtime, datum, active, topseller, changetime, price, stock, parent)
+VALUES ('BMW X5', 'gebrauchte Wage seit 2004 ...', '2 days', '2018-11-17', 1, 1, '2018-11-17 10:32:18', '6500', 0, 1);
+
+INSERT INTO `s_articles` (name, description, shippingtime, datum, active, topseller, changetime, price, stock, parent)
+VALUES ('Opel Astra', 'gebrauchte Wage seit 2000 ...', '7 days', '2018-11-05', 1, 0, '2018-11-17 10:32:18', '2500', 0, 1);
+
+INSERT INTO `s_articles` (name, description, shippingtime, datum, active, topseller, changetime, price, stock, parent)
+VALUES ('VW Golf', 'gebrauchte Wage seit 1999 ...', '6 days', '2018-11-14', 1, 0, '2018-11-15 11:32:18', '500', 0, 1);
+
+INSERT INTO `s_articles` (name, description, shippingtime, datum, active, topseller, changetime, price, stock, parent)
+VALUES ('1-Zimmer-Wohnung', 'frisch renoviert', '0 days', '2018-10-14', 1, 0, '2018-11-15 11:32:18', '300', 0, 4);

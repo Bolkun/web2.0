@@ -1,0 +1,45 @@
+
+/* labels */
+.slack-connector-label{ font-weight: bold; }
+.slack-connector-label-one-row{ float: left; width: 20%; vertical-align: top; }
+.slack-connector-cursor-default{ cursor: default; }
+
+/* section title */
+.slack-connector-section-title{ width: 100%; float: left; font-weight: bold; margin: 10px 0 15px 0; font-size: 14px; }
+
+/* description */
+.slack-connector-description{ width: 100%; float: left; margin: 5px 0; font-style: italic;}
+.slack-connector-description-one-row { margin-left: 20%; width: 80%; margin-bottom: 25px; }
+.slack-connector-description-after-color-picker { margin-top: 0; }
+
+/* form fields */
+.slack-connector-input-text{ width: 100%; }
+/* We cannot use % here, cause there is an JS Select 2 bug that changes % to pixels when reloaded */
+.slack-connector-select-one-row, .slack-connector-input-text-one-row{ width: 400px;} 
+
+/* form field select2 */
+.select2-container--default .select2-selection--multiple .select2-selection__choice{ 
+	background-image: -webkit-linear-gradient(top, white 50%, #eeeeee 100%);
+	background-image: -o-linear-gradient(top, white 50%, #eeeeee 100%);
+	background-image: linear-gradient(to bottom, white 50%, #eeeeee 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0); 
+}
+
+/* test message button and notification */
+#slack-connector-send-test-message{ margin-top: 20px; }
+.slack-connector-send-test-message-success{ color: #0a0;  vertical-align: bottom; margin-left: 5px; font-style: italic; display: none; }
+.slack-connector-send-test-message-error{ color: #f00;  vertical-align: bottom; margin-left: 5px; font-style: italic; display: none; }
+
+/* clear */
+.slack-connector-clear{ clear: both; }
+
+@media( max-width: 1050px ) {
+	.slack-connector-description-one-row, .slack-connector-label-one-row, .slack-connector-input-text-one-row, .slack-connector-select-one-row{ margin-left: 0; width: 100%; float: left;}
+	.slack-connector-description-one-row{ text-align: justify; }
+	.slack-connector-select2-multiple{ width: 400px; }
+}
+
+@media( max-width: 500px ) {
+	.slack-connector-select2-multiple{ width: 300px; }
+}

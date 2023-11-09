@@ -1,0 +1,9 @@
+CREATE TABLE `events` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `titel` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `ort` varchar(33) COLLATE utf8_unicode_ci NOT NULL,
+  `datetime` datetime NOT NULL,
+  `link` varchar(65535) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `kategorie` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

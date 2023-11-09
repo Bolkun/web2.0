@@ -1,0 +1,16 @@
+__construct()				the constructor of a class
+__destruct()				the destructor of a class
+__call($funName, $arguments)		The __call() method will be called when an undefined or inaccessible method is called.
+__callStatic($funName, $arguments)	The __callStatic() method will be called when an undefined or inaccessible static method is called.
+__get($propertyName)			The __get() method will be called when getting a member variable of a class.
+__set($property, $value)		The __set() method will be called when setting a member variable of a class.
+__isset($content) 			The __isset() method will be called when calling isset() or empty() for an undefined or inaccessible member.
+__unset($content)			The __unset() method will be called when calling reset() for an undefined or inaccessible member.
+__sleep()				The __sleep() method will be called first when executing serialize().
+__wakeup()				The __wakeup() method will be called first when deserialization() is executed.
+__toString()				The __toString() method will be called when using echo method to print an object directly.
+__invoke()				The __invoke() method will be called when trying to call an object in a way of calling function.
+__set_state($an_array)			The __set_state() method will be called when calling var_export().
+__clone()				The __clone() method will be called when the object is copied.
+__autoload($className)			Try to load an undefined class.
+__debugInfo()				Print debug information.

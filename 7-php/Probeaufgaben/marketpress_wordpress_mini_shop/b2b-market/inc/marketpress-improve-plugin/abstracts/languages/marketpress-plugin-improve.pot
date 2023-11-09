@@ -1,0 +1,45 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MarketPress Plugin Improve\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-14 08:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: MarketPress <support@marketpress.de>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: abstracts/abstract-class-marketpress-improve-plugin.php:273
+msgid ""
+"Click <a style=\"cursor: pointer;\" class=\"marketpress-improve-show-data\">"
+"here</a> to show the data sent to MarketPress."
+msgstr ""
+
+#: abstracts/abstract-class-marketpress-improve-plugin.php:294
+msgid "No, thanks."
+msgstr ""
+
+#: abstracts/abstract-class-marketpress-improve-plugin.php:262
+#, php-format
+msgid ""
+"Thanks for supporting <strong>MarketPress</strong> to improve <strong>"
+"%s</strong>"
+msgstr ""
+
+#: abstracts/abstract-class-marketpress-improve-plugin.php:273
+#, php-format
+msgid ""
+"We at <strong>MarketPress</strong> want to constantly improve our plugin "
+"<strong>%s</strong>. We would be happy if you help us by sending data on "
+"your use of the plugin once. The data is anonymous, there is no conclusion "
+"on your used website or MarketPress licence."
+msgstr ""
+
+#: abstracts/abstract-class-marketpress-improve-plugin.php:284
+msgid "Yes, send data once"
+msgstr ""

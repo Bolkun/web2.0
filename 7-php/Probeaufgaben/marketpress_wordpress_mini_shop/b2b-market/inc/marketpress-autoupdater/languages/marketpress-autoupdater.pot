@@ -1,0 +1,118 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MarketPress AutoUpdater\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-18 06:01+0200\n"
+"POT-Revision-Date: Mon Aug 01 2016 11:40:12 GMT+0200 (CEST)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Poedit 2.0.9\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: class-MarketPress_Auto_Update.php:378 class-MarketPress_Auto_Update.php:622
+msgctxt "MarketPress URL part, should be .de for German languages"
+msgid "marketpress.com"
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:389
+#, php-format
+msgid ""
+"<strong>Whoops!</strong> The license key you have entered appears not to be "
+"valid. You can always get your valid key from your Downloads page at %s. "
+"Automatic updates for this plugin have been disabled until you enter a valid "
+"key."
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:396
+#, php-format
+msgid ""
+"<strong>All is fine.</strong> You are using a valid license key from %s for "
+"this plugin."
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:410
+#, php-format
+msgid "Enter a valid license key from %s below."
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:415
+msgid "Help! I need to retrieve my key."
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:421
+msgid ""
+"<strong>Whoops!</strong> The license key you have entered appears not to be "
+"valid. Automatic updates for this plugin have been disabled until you enter a "
+"valid key."
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:426
+#, php-format
+msgid ""
+"<strong>All is fine.</strong> You are using a valid license key from %s for "
+"this plugin. <a href=\"%s\">Delete Key</a>."
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:437
+msgid "Your license status"
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:448
+msgid "License Key"
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:450
+msgid "Activate"
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:629
+msgid "License key has been deleted."
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:635
+msgid "License activated successfully."
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:641 class-MarketPress_Auto_Update.php:648
+#: class-MarketPress_Auto_Update.php:657 class-MarketPress_Auto_Update.php:666
+msgid "License cannot be activated."
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:642
+msgid "The license key you have entered is not correct."
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:649
+#, php-format
+msgid ""
+"You have reached the limit of URLs included in your license. Please update "
+"your license at %s."
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:658
+#, php-format
+msgid ""
+"Something went wrong. Please try again later or contact the support staff at "
+"%s."
+msgstr ""
+
+#: class-MarketPress_Auto_Update.php:667
+#, php-format
+msgid ""
+"Your license does not appear to be valid for this plugin. Please update your "
+"license at %s."
+msgstr ""

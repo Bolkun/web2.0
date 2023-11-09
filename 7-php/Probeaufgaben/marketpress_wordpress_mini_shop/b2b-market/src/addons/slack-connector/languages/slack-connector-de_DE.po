@@ -1,0 +1,924 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Slack Connector\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Wed Jun 22 2016 06:55:07 GMT+0200\n"
+"PO-Revision-Date: Thu Jun 30 2016 12:44:13 GMT+0200\n"
+"Last-Translator: MarketPress Support <support@marketpress.com>\n"
+"Language-Team: \n"
+"Language: German\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Loco-Target-Locale: de_DE"
+
+#. Description of the plugin
+msgid ""
+"Connect WordPress and Slack - with the Slack Connector. The plugin offers "
+"you and your team all conditions to always be informed about all activities "
+"on your blog, shop and forum. And to perfectly optimize your processes."
+msgstr ""
+"Verbinde WordPress und Slack - mit dem Slack Connector. Das Plugin hilft dir "
+"und deinem Team dabei, stets über alle Vorgänge aus Blog, Onlineshop oder "
+"Forum informiert zu sein. So kannst du deine Prozesse perfekt optimieren."
+
+#. Name of the plugin
+msgid "Slack Connector"
+msgstr "Slack Connector"
+
+msgid "MarketPress"
+msgstr "MarketPress"
+
+#. Author URI of the plugin
+msgid "https://marketpress.com"
+msgstr "https://marketpress.com"
+
+#: ../application/custom-post-type.php:23
+msgctxt "post type general name"
+msgid "Slack Connectors"
+msgstr "Slack Connectors"
+
+#: ../application/custom-post-type.php:24
+msgctxt "post type singular name"
+msgid "Slack Connector"
+msgstr "Slack Connector"
+
+#: ../application/custom-post-type.php:25
+msgctxt "admin menu"
+msgid "Slack Connector"
+msgstr "Slack Connector"
+
+#: ../application/custom-post-type.php:26
+msgctxt "add new on admin bar"
+msgid "Slack Connector"
+msgstr "Slack Connector"
+
+#: ../application/custom-post-type.php:27
+msgctxt "slack_connector"
+msgid "Add New"
+msgstr "Neu hinzufügen"
+
+#: ../application/custom-post-type.php:28
+msgid "Add New Slack Connector"
+msgstr "Neuen Slack Connector hinzufügen"
+
+#: ../application/custom-post-type.php:29
+msgid "New Slack Connector"
+msgstr "Neuer Slack Connector"
+
+#: ../application/custom-post-type.php:30
+msgid "Edit Slack Connector"
+msgstr "Slack Connector bearbeiten"
+
+#: ../application/custom-post-type.php:31
+msgid "View Slack Connector"
+msgstr "Slack Connector ansehen"
+
+#: ../application/custom-post-type.php:33
+msgid "Search Slack Connectors"
+msgstr "Slack Connectors suchen"
+
+#: ../application/custom-post-type.php:34
+msgid "Parent Slack Connectors:"
+msgstr "Übergeordnete Slack Connectors"
+
+#: ../application/custom-post-type.php:35
+msgid "No Slack Connectors found."
+msgstr "Keine Slack Connectors gefunden."
+
+#: ../application/custom-post-type.php:36
+msgid "No Slack Connectors found in Trash."
+msgstr "Keine Slack Connectors im Papierkorb gefunden."
+
+#: ../application/custom-post-type.php:44
+msgid "Slack Connectors for Slack."
+msgstr "Slack Connectors für Slack."
+
+#: ../application/general.php:131
+msgid "Please enter a webhook URL"
+msgstr "Bitte gebe eine URL Webhook ein."
+
+#: ../application/general.php:145
+msgid "*This is a test notification*"
+msgstr "*Das ist eine Testbenachrichtigung*"
+
+#: ../application/general.php:152
+msgid "Sending test notification succeeded"
+msgstr "Senden der Testbenachrichtigung erfolgreich."
+
+#: ../application/general.php:153
+msgid ""
+"This is a test message from Slack Connector. We hope you enjoy this plugin. "
+"\\nLovely regards\\n\\nYour MarketPress Team!"
+msgstr ""
+"Das ist eine Testnachricht von Slack Connector. Wir hoffen Dir gefällt "
+"dieses Plugin. Liebe Grüße Dein MarketPressTeam!"
+
+#: ../application/general.php:168
+msgid "ERROR: Something went wrong. Please, check your webhook URL."
+msgstr "Fehler: Etwas ist schiefgegangen. Bitte überprüfe deine WebHook URL."
+
+#: ../application/backend/custom-post-type-handler.php:62 ..
+#: application/backend/custom-post-type-handler.php:88
+msgid "Webhook URL"
+msgstr "WebHook URL"
+
+#: ../application/backend/custom-post-type-handler.php:94
+msgid ""
+"Firstly, go to <a target=\"_blank\" href=\"https://slack."
+"com/services/new/incoming-webhook\">https://slack.com/services/new/incoming-"
+"webhook</a> and create a new webhook. Next, set a channel to receive "
+"notifcations, copy the URL for the webhook and insert this URL in the field "
+"above."
+msgstr ""
+"Gehe zuerst auf <a target=\"_blank\" href=\"https://slack."
+"com/services/new/incoming-webhook\">https://slack.com/services/new/incoming-"
+"webhook</a> und erstelle einen neuen WebHook. Lege als nächstes einen Kanal "
+"fest um Benachrichtigungen zu erhalten, kopiere die URL für den WebHook und "
+"füge diese URL in das obige Feld ein."
+
+#: ../application/backend/custom-post-type-handler.php:98
+msgid "Send a test notification"
+msgstr "Sende eine Testbenachrichtigung"
+
+#: ../application/backend/custom-post-type-handler.php:102
+msgid "Test notification has been sent."
+msgstr "Testbenachrichtigung wurde versendet."
+
+#: ../application/backend/custom-post-type-handler.php:123
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: ../application/backend/custom-post-type-handler.php:126
+msgid "Slack Username"
+msgstr "Slack Benutzername"
+
+#: ../application/backend/custom-post-type-handler.php:139
+msgid "Choose a username for your notifications. You can't leave this field empty."
+msgstr ""
+"Wähle einen Benutzernamen für deine Benachrichtigungen. Dieses Feld kann "
+"nicht freigelassen werden."
+
+#: ../application/backend/custom-post-type-handler.php:145
+msgid "Emoji"
+msgstr "Emoji"
+
+#: ../application/backend/custom-post-type-handler.php:150
+msgid "Emoji Code, example: :mailbox_with_mail:"
+msgstr "Emoji Code, z.B.: :mailbox_with_mail:"
+
+#: ../application/backend/custom-post-type-handler.php:153
+#, php-format
+msgid ""
+"Choose an emoji that will be included in every %s notification. You can find "
+"all emoji codes in the <a href=\"http://www.emoji-cheat-sheet.com/\" "
+"target=\"_blank\">Emoji Cheat Sheet</a>."
+msgstr ""
+"Wähle ein Emoji, das in jeder %s Benachrichtigung gesendet wird. Du findest "
+"alle Emoji Codes im <a href=\"http://www.emoji-cheat-sheet.com/\" "
+"target=\"_blank\">Emoji Cheat Sheet</a>. "
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:
+#: 340 ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.
+#: php:575
+msgctxt "MarketPress URL part, should be .de for German languages"
+msgid "marketpress.com"
+msgstr "marketpress.de"
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:350
+#, php-format
+msgid ""
+"<strong>Whoops!</strong> The license key you have entered appears not to be "
+"valid. You can always get your valid key from your Downloads page at %s. "
+"Automatic updates for this plugin have been disabled until you enter a valid "
+"key."
+msgstr ""
+"<strong>Hoppla!</strong> Der Lizenzschlüssel, den du eingegeben hast, "
+"scheint nicht gültig zu sein. Du kannst deinen Lizenzschlüssel stets auf "
+"deiner Downloads-Seite bei %s nachsehen. Automatische Updates sind nicht "
+"verfügbar, bis du einen gültigen Lizenzschlüssel eingegeben hast."
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:357
+#, php-format
+msgid ""
+"<strong>All is fine.</strong> You are using a valid license key from %s for "
+"this plugin. If you need to enter a new key, just override the current one "
+"and save."
+msgstr ""
+"<strong>Alles ist gut.</strong> Du benutzt einen gültigen Lizenzschlüssel "
+"von %s für dieses Plugin. Wenn du einen neuen Lizenzschlüssel eingeben "
+"möchtest, überschreibe den jetzigen einfach und speichere."
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:370
+#, php-format
+msgid "Enter a valid license key from %s below."
+msgstr "Gib einen gültigen Lizenzschlüssel von %s ein."
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:375
+msgid "Help! I need to retrieve my key."
+msgstr "Hilfe! Ich muss meinen Lizenzschlüssel nachsehen."
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:381
+msgid ""
+"<strong>Whoops!</strong> The license key you have entered appears not to be "
+"valid. Automatic updates for this plugin have been disabled until you enter "
+"a valid key."
+msgstr ""
+"<strong>Hoppla!</strong> Der Lizenzschlüssel, den du eingegeben hast, "
+"scheint nicht gültig zu sein. Du kannst deinen Lizenzschlüssel stets auf "
+"deiner Downloads-Seite bei %s nachsehen. Automatische Updates sind nicht "
+"verfügbar, bis du einen gültigen Lizenzschlüssel eingegeben hast."
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:386
+#, php-format
+msgid ""
+"<strong>All is fine.</strong> You are using a valid license key from %s for "
+"this plugin. If you need to enter a new key, just override the current one "
+"and save. Or just <a href=\\\"%s\\\">delete it</a> to make it disappear."
+msgstr ""
+"<strong>Alles ist gut.</strong> Du benutzt einen gültigen Lizenzschlüssel "
+"von %s für dieses Plugin. Wenn du einen neuen Lizenzschlüssel eingeben "
+"möchtest, überschreibe den jetzigen einfach und speichere."
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:396
+msgid "Your license status"
+msgstr "Status deiner Lizenz"
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:402
+msgid "License Key"
+msgstr "Lizenzschlüssel"
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:404
+msgid "Activate"
+msgstr "Aktivieren"
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:582
+msgid "License key has been deleted."
+msgstr "Lizenzschlüssel wurde gelöscht."
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:588
+msgid "License activated successfully."
+msgstr "Lizenz erfolgreich aktiviert."
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:
+#: 594 ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.
+#: php:601 ../application/marketpress/class-
+#: Slack_Connector_MarketPress_Auto_Update.php:610 ..
+#: application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:619
+msgid "License cannot be activated."
+msgstr "Lizenz kann nicht aktiviert werden."
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:595
+msgid "The license key you have entered is not correct."
+msgstr "Der Lizenzschlüssel, den du eingegeben hast, ist nicht korrekt."
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:602
+#, php-format
+msgid ""
+"You have reached the limit of URLs included in your license. Please update "
+"your license at %s."
+msgstr ""
+"Du hast das URL-Limit für deinen Lizenzschlüssel erreicht. Bitte "
+"aktualisiere deine Lizenz bei %s."
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:611
+#, php-format
+msgid ""
+"Something went wrong. Please try again later or contact the support staff at "
+"%s."
+msgstr ""
+"Etwas ist schief gelaufen. Bitte versuche es später noch einmal und "
+"kontaktiere den Support bei %s."
+
+#: ../application/marketpress/class-Slack_Connector_MarketPress_Auto_Update.php:620
+#, php-format
+msgid ""
+"Your license does not appear to be valid for this plugin. Please update your "
+"license at %s."
+msgstr ""
+"Deine Lizenz scheint nicht gültig zu sein. Bitte aktualisiere deine Lizenz "
+"bei %s."
+
+#: ../application/modules/bbpress/application/general.php:35 ..
+#: application/modules/bbpress/application/backend/meta-boxes.php:160
+msgid "A new topic \"[topic-name]\" has been posted in the forum \"[forum-name]\""
+msgstr "Ein neues Topic \"[topic-name]\" wurde in dem Forum \"[forum-name]\" gepostet."
+
+#: ../application/modules/bbpress/application/general.php:40 ..
+#: application/modules/bbpress/application/backend/meta-boxes.php:188
+msgid "A new reply has been posted for \"[topic-name]\" in the forum \"[forum-name]\""
+msgstr "Für \"[topic-name]\" wurde eine neue Antwort im Forum \"[forum-name]\" gepostet."
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:23
+msgid "bbPress"
+msgstr "bbPress"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:45 ..
+#: application/modules/bbpress/application/backend/meta-boxes.php:273 ..
+#: application/modules/bbpress/application/backend/meta-boxes.php:301 ..
+#: application/modules/bbpress/application/backend/meta-boxes.php:329 ..
+#: application/modules/bbpress/application/backend/meta-boxes.php:357 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:45 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:261 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:289 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:317 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:345 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:377 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:461 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:545 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:629 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:710 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:738 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:60 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:195 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:223 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:250 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:442
+msgid "Deactivated"
+msgstr "Deaktiviert"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:46
+msgid "New Topic and New Reply"
+msgstr "Neues Topic und neue Antwort"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:47
+msgid "New Topic"
+msgstr "Neues Topic"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:48
+msgid "New Reply"
+msgstr "Neue Antwort"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:58
+msgid "Specific Settings"
+msgstr "Spezifische Einstellungen"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:67 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:68 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:371 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:455 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:539 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:623 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:54 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:244
+msgid "Notifications"
+msgstr "Benachrichtigungen"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:85
+msgid ""
+"You can choose whether you want to get a slack notification if there is a "
+"new topic, a new reply or both."
+msgstr ""
+"Du kannst wählen, ob du eine Slack Benachrichtigung für ein neues Topic, "
+"eine neue Antwort oder beides erhälst."
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:97
+msgid "Forums"
+msgstr "Foren"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:115
+msgid "All Forums"
+msgstr "Alle Foren"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:142
+msgid ""
+"You can either get notifications for all bbPress forums or just for chosen "
+"forums."
+msgstr ""
+"Du kannst entweder Benachrichtigungen für alle bbPress Foren oder "
+"ausgewählte Foren erhalten."
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:154
+msgid "Title for a New Topic"
+msgstr "Titel für ein neues Topic"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:167
+msgid ""
+"Choose a title for your notifications when a new topic has been posted. You "
+"can't leave this field empty."
+msgstr ""
+"Wähle einen Titel für deine Benachrichtgungen aus, wenn ein neues Topic "
+"gepostet wurde. Du kannst dieses Feld nicht frei lassen."
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:168 ..
+#: application/modules/bbpress/application/backend/meta-boxes.php:196 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:206 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:408 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:492 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:660 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:145 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:392
+msgid "You can use the following placeholders"
+msgstr "Du kannst folgende Platzhalter benutzen"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:170 ..
+#: application/modules/bbpress/application/backend/meta-boxes.php:198 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:212
+msgid ""
+"You can use valid Slack markup, for more details, see <a href=\"https://get."
+"slack.help/hc/en-us/articles/202288908-How-can-I-add-formatting-to-my-"
+"messages-\" target=\"_blank\">here</a>"
+msgstr ""
+"Du kannst ein gültiges Slack Markup benutzen, für mehr Details siehe hier <a "
+"href=\"https://get.slack.help/hc/en-us/articles/202288908-How-can-I-add-"
+"formatting-to-my-messages-\" target=\"_blank\">hier</a>"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:182
+msgid "Title for a New Reply"
+msgstr "Titel für eine neue Antwort"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:195
+msgid ""
+"Choose a title for your notifications when a new reply has been posted. You "
+"can't leave this field empty."
+msgstr ""
+"Wähle einen Titel für deine Benachrichtigungen aus, wenn eine neue Antwort "
+"geposted wurde. Du kannst dieses Feld nicht frei lassen."
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:210
+msgid "Color for a New Topic"
+msgstr "Farbe für ein neues Topic"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:224
+msgid "Choose a color for a notification when a new topic has been posted."
+msgstr ""
+"Wähle eine Farbe für die Benachrichtigung, wenn ein neues Topic gepostet "
+"wurde."
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:236
+msgid "Color for a New Reply"
+msgstr "Farbe für eine neue Antwort"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:250
+msgid "Choose a color for a notification when a new reply has been posted."
+msgstr ""
+"Wähle eine Farbe für die Benachrichtigung, wenn eine neue Antwort gepostet "
+"wurde."
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:262
+msgid "Private Topics / Forums"
+msgstr "Private Topics / Foren"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:274 ..
+#: application/modules/bbpress/application/backend/meta-boxes.php:302 ..
+#: application/modules/bbpress/application/backend/meta-boxes.php:330 ..
+#: application/modules/bbpress/application/backend/meta-boxes.php:358 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:262 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:290 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:318 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:378 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:462 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:546 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:630 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:711 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:739 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:61 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:196 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:224 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:443
+msgid "Activated"
+msgstr "Aktiviert"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:278
+msgid ""
+"If you deactivate this option, you will not get notifications for a new "
+"private topic or new answers for a private topic. If you have chosen \"All "
+"Forums\" for the option \"Forums\" you will not get notifications for topics "
+"and replies in private forums if you activate this option. If you have "
+"chosen certain forums in the option \"Forums\", private forums will not be "
+"considered if you deactivate this option."
+msgstr ""
+"Wenn du diese Option deaktivierst, erhälst du keine Benachrichtigung für ein "
+"neues privates Topic oder neue Antworten für ein privates Topic. Wenn du "
+"\"Alle Foren\" bei der Option \"Foren\" ausgewählt hast, erhälst du keine "
+"Benachrichtigungen für Topics und Antworten in privaten Foren, wenn du diese "
+"Option aktivierst. Wenn du bestimmte Foren in der Option \"Foren\" ausgewählt "
+"hast, werden private Foren nicht berücksichtigt, wenn du diese Option "
+"deaktivierst."
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:290
+msgid "Show Username"
+msgstr "Benutzernamen anzeigen"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:306
+msgid ""
+"Choose whether the username of the bbPress user will be shown in your "
+"notification."
+msgstr ""
+"Wähle, ob der Benutzername des bbPress Nutzers in deinen Benachrichtigung "
+"angezeigt wird."
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:318
+msgid "Show Gravatar"
+msgstr "Gravatar anzeigen"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:334
+msgid ""
+"Choose whether the Gravatar of the bbPress user will be shown in your "
+"notification. This will only work if \"Show Username\" is activated."
+msgstr ""
+"Wähle, ob der Gravatar des bbPress Nutzers in deinen Benachrichtigungen "
+"angezeigt wird. Es funktioniert nur, wenn \"Benutzername anzeigen\" aktiviert "
+"ist."
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:346
+msgid "Show Excerpt"
+msgstr "Auszug anzeigen"
+
+#: ../application/modules/bbpress/application/backend/meta-boxes.php:362
+msgid ""
+"Choose whether an excerpt of the bbPress users message shall be shown in "
+"your notification."
+msgstr ""
+"Wähle, ob ein Auszug der bbPress-Nutzer Nachricht in deinen "
+"Benachrichtigungen angezeigt werden soll. "
+
+#: ../application/modules/woocommerce/application/general.php:142
+msgid "View Order"
+msgstr "Bestellung ansehen"
+
+#: ../application/modules/woocommerce/application/general.php:158
+msgid "Order"
+msgstr "Bestellung"
+
+#: ../application/modules/woocommerce/application/general.php:164
+msgid "Customer"
+msgstr "Kunde"
+
+#: ../application/modules/woocommerce/application/general.php:171
+msgid "Order Total"
+msgstr "Gesamtbestellwert"
+
+#: ../application/modules/woocommerce/application/general.php:177
+msgid "Order Items"
+msgstr "Artikel der Bestellung"
+
+#: ../application/modules/woocommerce/application/general.php:177
+msgid "Order Item"
+msgstr "Artikel der Bestellung"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:23
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:46
+msgid "New Order"
+msgstr "Neue Bestellung"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:47
+msgid "Product Sale"
+msgstr "Bestimmte Produkte"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:48
+msgid "Product Category Sale"
+msgstr "Bestimmte Produktkategorie"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:65
+msgid "New Order Settings"
+msgstr "Neue Bestellung - Einstellungen"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:86
+msgid ""
+"You can choose either to get a notifiaction when you have a new order or "
+"when certain products are sold. You can also choose to get notification when "
+"products of certain product categories are sold."
+msgstr ""
+"Du kannst wählen, ob du eine Benachrichtigung bekommst, wenn du eine neue "
+"Bestellung hast oder wenn bestimmte Produkte verkauft wurden. Du kannst auch "
+"Benachrichtigungen erhalten, wenn Produkte bestimmter Produktkategorien "
+"verkauft wurden. "
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:101
+msgid "Products"
+msgstr "Produkte"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:149
+msgid "Product Categories"
+msgstr "Produktkategorien"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:192 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:394 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:478 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:562 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:646 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:131 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:378
+msgid "Notification Title"
+msgstr "Titel der Benachrichtigung"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:198
+msgid "New sale!"
+msgstr "Produktverkauf"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:205
+msgid "Choose a title for your the notification \"New Order / Product Sale\"."
+msgstr ""
+"Wähle einen Titel für deine Benachrichtigung \"Neue Bestellung / "
+"Produktverkauf\"."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:208
+msgid "When you set the option to \"New Order\", you can also use"
+msgstr ""
+"Wenn du die Option auf \"Neue Bestellung\" setzt, kannst du auch folgendes "
+"nutzen"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:210
+msgid ""
+"When you set the option to \"Product Sale\" or \"Product Category Sale\", you "
+"can also use"
+msgstr ""
+"Wenn du die Option \"Bestimmte Produkt\" oder \"Bestimmte Produktkategorie\" "
+"gesetzt hast, kannst du auch folgendes nutzen."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:224 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:421 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:505 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:589 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:673 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:158 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:405
+msgid "Notification Color"
+msgstr "Farbe der Benachrichtigung"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:238 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:435 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:519 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:603 ..
+#: application/modules/woocommerce/application/backend/meta-boxes.php:687 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:172 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:419
+msgid "Choose a color for this kind of notification."
+msgstr "Wähle eine Farbe für diese Art von Benachrichtigung."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:250
+msgid "Field - Order"
+msgstr "Feld - Bestellung"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:266
+msgid ""
+"Activate or deactiate a field in your notification that shows the order "
+"number with a link to view the order."
+msgstr ""
+"Aktiviere oder deaktiviere ein Feld in deiner Benachrichtigung, welches die "
+"Bestellnummer mit einen Link, um die Bestellung anzusehen, anzeigt."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:278
+msgid "Field - Order Total"
+msgstr "Feld - Gesamtbestellwert"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:294
+msgid ""
+"Activate or deactiate a field in your notification that shows the order "
+"total."
+msgstr ""
+"Aktiviere oder deaktiviere ein Feld in deiner Benachrichtigung, welches den "
+"Gesamtbestellwert anzeigt."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:306
+msgid "Field - Customer"
+msgstr "Feld - Kunde"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:322
+msgid ""
+"Activate or deactiate a field in your notification that shows the name of "
+"the customer."
+msgstr ""
+"Aktiviere oder deaktiviere ein Feld in deiner Benachrichtigung, das den "
+"Kundennamen anzeigt."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:334
+msgid "Field - Items"
+msgstr "Feld - Artikel"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:346
+msgid "Activated with Price"
+msgstr "Aktiviert mit Preis"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:347
+msgid "Activated without Price"
+msgstr "Aktiviert ohne Preis"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:351
+msgid ""
+"Activate or deactiate a field in your notification that shows the items of "
+"the order, respectively the product name if you set the option "
+"\"Notifications\" to \"Product Sale\" or \"Product Category Sale\". You can choose "
+"whether the price is shown or not."
+msgstr ""
+"Aktiviere oder deaktiviere ein Feld in deiner Benachrichtigung, welches die "
+"Artikel der Bestellung anzeigt, bzw. den Produktnamen, falls du die Option "
+"\"Benachrichtigung\" bei \"Produkt Ausverkauf\" oder \"Produktkategorie "
+"Ausverkauf\" gesetzt hast. Du kannst wählen, ob der Preis angezeigt wird oder "
+"nicht."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:360
+msgid "Low Stock Settings"
+msgstr "Geringer Lagerbestand - Einstellungen"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:382
+msgid "You can get a notification when a product is low on stock."
+msgstr ""
+"Du kannst eine Benachrichtigung erhalten, wenn der Lagerbestand eines "
+"Produktes ausgeht."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:400
+msgid "Low on stock: The product [product-name] ([product-id]) is low on stock!"
+msgstr ""
+"Nur noch wenige Exemplare: Das Produkt [product-name] ([product-id]) ist "
+"fast ausverkauft!"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:407
+msgid "Choose a title for the notification \"Low on Stock\"."
+msgstr "Wähle einen Titel für die Benachrichtigung \"Fast Ausverkauft\"."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:444
+msgid "Out of Stock Settings"
+msgstr "Ausverkaufte Produkte  - Einstellungen"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:466
+msgid "You can get a notification when a product is out of stock."
+msgstr "Du kannst eine Benachrichtigung erhalten, wenn ein Produkt ausverkauft ist."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:484
+msgid "Out of stock: The product [product-name] ([product-id]) is out of stock!"
+msgstr "Ausverkauft: Das Produkt [product-name] ([product-id]) ist ausverkauft!"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:491
+msgid "Choose a title for the notification \"Out of Stock\"."
+msgstr "Wähle einen Titel für die Benachrichtigung \"Ausverkauft\"."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:528
+msgid "New Customer Settings"
+msgstr "Neuer Kunde - Einstellungen"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:550
+msgid ""
+"You can get a notification when a new customer has been created by "
+"WooCommerce."
+msgstr ""
+"Du kannst eine Benachrichtigung erhalten, wenn WooCommerce einen neuen "
+"Kunden erstellt hat."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:568
+msgid "New Customer: [customer-name]"
+msgstr "Neuer Kunde: [customer-name]"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:575
+msgid "Choose a title for the notification \"New Customer\"."
+msgstr "Wähle einen Titel für die Benachrichtigung \"Neuer Kunde\"."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:576
+msgid "You can use the following placeholder"
+msgstr "Du kannst folgende Platzhalter verwenden"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:612
+msgid "New Review Settings"
+msgstr "Neue Kundenbewertung - Einstellungen"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:634
+msgid "You can get a notification when new customer has been created by WooCommerce."
+msgstr ""
+"Du kannst eine Benachrichtigung erhalten, wenn WooCommerce einen neuen "
+"Kunden erstellt hat."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:652
+msgid "New Review: by [reviewer-name] for [product-name]"
+msgstr "Neue Kundenbewertung: von [reviewer-name] für [product-name]"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:659
+msgid "Choose a title for the notification \"New Review\"."
+msgstr "Wähle einen Titel für die Benachrichtigung \"Neue Kundenbewertung\"."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:699
+msgid "Review Text"
+msgstr "Text der Kundenbewertung"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:715
+msgid "Choose whether the review text is shown in the notification."
+msgstr ""
+"Wähle, ob der Text der Kundenbewertung in der Benachrichtigung angezeigt "
+"wird."
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:727
+msgid "Rating"
+msgstr "Bewertung"
+
+#: ../application/modules/woocommerce/application/backend/meta-boxes.php:743
+msgid ""
+"Choose whether the review rating is shown in the notification. A 5-star "
+"rating system is used to display the rating."
+msgstr ""
+"Wähle, ob die Kundenbewertung in der Benachrichtigung angezeigt wird. Es "
+"wird ein 5-Sterne-Bewertungssystem genutzt, um die Bewertung anzuzeigen."
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:23
+msgid "WordPress"
+msgstr "WordPress"
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:51
+msgid "New Post Published"
+msgstr "Neuer Beitrag veröffentlicht"
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:65
+msgid "You can get a notification when a new post has been published."
+msgstr ""
+"Du kannst eine Benachrichtigung erhalten, wenn ein neuer Beitrag "
+"veröffentlicht wurde."
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:77 ..
+#: application/modules/wordpress/application/backend/meta-boxes.php:335
+msgid "Categories"
+msgstr "Kategorien"
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:95
+msgid "All Categories"
+msgstr "Alle Kategorien"
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:119
+msgid ""
+"You can either get notifications for all new posts or just for chosen "
+"categories."
+msgstr ""
+"Du kannst entweder Benachrichtigungen für alle neuen Beiträge oder nur für "
+"ausgewählte Kategorien erhalten."
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:137
+msgid "New Post \"[post-title]\" by [post-author]"
+msgstr "Neuer Beitrag \"[post-title]\" von [post-author]"
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:144
+msgid "Choose a title for the notification \"New Post\"."
+msgstr "Wähle einen Titel für die Benachrichtigung \"Neuer Beitrag\"."
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:184
+msgid "Post Content"
+msgstr "Beitragsinhalt"
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:200
+msgid "Choose whether the post content is shown in the notification."
+msgstr "Wähle, ob der Inhalt des Beitrags in der Benachrichtigung angezeigt wird."
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:212
+msgid "Post Thumbnail"
+msgstr "Beitragsbild"
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:228
+msgid "Choose whether the post thumbnail is shown in your slack notification."
+msgstr "Wähle, ob das Beitragsbild in der Slack Benachrichtigung angezeigt wird."
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:241
+msgid "New Comment Posted"
+msgstr "Neuer Kommentar gepostet"
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:251
+msgid "All Comments"
+msgstr "Alle Kommentare"
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:252
+msgid "Comments for Special Posts"
+msgstr "Kommentare für spezielle Beiträge"
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:253
+msgid "Comments for Posts of Special Categories"
+msgstr "Kommentare für Beiträge von besonderen Kategorien"
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:272
+msgid ""
+"You can get a notification when a new comment has been published. You can "
+"choose to get notifcations for all comment posts or just for special posts "
+"or posts of special categories"
+msgstr ""
+"Du kannst eine Benachrichtigung erhalten, wenn ein neuer Kommentar "
+"veröffentlicht wurde. Du kannst wählen, ob du Benachrichtigungen für alle "
+"Kommentare erhälst, nur für besondere Beiträge, oder nur Beiträge von "
+"besonderen Kategorien."
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:287
+msgid "Posts"
+msgstr "Beitrag"
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:384
+msgid "New Comment by [comment-author] for \"[post-title]\""
+msgstr "Neuer Kommentar von [comment-author] für \"[post-title]\""
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:391
+msgid "Choose a title for the notification \"New Comment\"."
+msgstr "Wähle einen Titel für die Benachrichtigung \"Neuer Kommentar\"."
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:431
+msgid "Comment Content"
+msgstr "Kommentarinhalt"
+
+#: ../application/modules/wordpress/application/backend/meta-boxes.php:447
+msgid "Choose whether the comment content is shown in the notification."
+msgstr "Wähle, ob der Inhalt des Kommentares in der Benachrichtigung angezeigt wird."

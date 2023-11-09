@@ -1,0 +1,15 @@
+﻿Farbe
+rot
+gelb
+blau
+violett
+cyan
+orange
+grün
+magenta
+braun
+weiß
+grau
+schwarz
+Helligkeit
+Dunkelheit

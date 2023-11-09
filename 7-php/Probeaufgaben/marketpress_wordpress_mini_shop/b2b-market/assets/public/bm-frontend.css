@@ -1,0 +1,38 @@
+.b2b-discount-banner {
+    font-family: sans-serif;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 25px;
+    background-color: #145474;
+    color: #fff;
+    text-align: center;
+    display: none;
+    z-index: 99;
+}
+
+.b2b-discount-banner-dismiss {
+    background: none;
+    border: 0;
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.b2b-discount-banner p {
+    margin: 0px;
+}
+button.b2b-discount-banner-dismiss:hover {
+    background: none;
+}
+
+.variation-bulk-price {
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+}

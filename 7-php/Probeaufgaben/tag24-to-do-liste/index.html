@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do-Liste</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <script src="js/lib/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/popper.min.js"></script>
+    <script src="js/lib/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+<form action="main.php" method="post">
+    <h1 class="text-center">To Do List</h1>
+    <div class="form-group">
+        <label>Login</label>
+        <input type="text" name="name" class="form-control" placeholder="Enter login" minlength="3" maxlength="15" required>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control" placeholder="Password" minlength="3" maxlength="32" required>
+    </div>
+    <a href="/to-do-liste/reg.php" class="badge badge-warning">Registrate</a>
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+</body>
+</html>

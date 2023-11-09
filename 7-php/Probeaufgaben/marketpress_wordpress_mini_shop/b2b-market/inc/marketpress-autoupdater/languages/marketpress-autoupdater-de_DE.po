@@ -1,0 +1,161 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarketPress AutoUpdater\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-26 06:33+0200\n"
+"PO-Revision-Date: 2016-08-26 06:34+0200\n"
+"Last-Translator: MarketPress <support@marketpress.de>\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Loco-Target-Locale: de_DE\n"
+
+#: class-MarketPress_Auto_Update.php:364 class-MarketPress_Auto_Update.php:608
+msgctxt "MarketPress URL part, should be .de for German languages"
+msgid "marketpress.com"
+msgstr "marketpress.de"
+
+#: class-MarketPress_Auto_Update.php:375
+#, php-format
+msgid ""
+"<strong>Whoops!</strong> The license key you have entered appears not to be "
+"valid. You can always get your valid key from your Downloads page at %s. "
+"Automatic updates for this plugin have been disabled until you enter a valid "
+"key."
+msgstr ""
+"<strong>Hoppla!</strong> Der Lizenzschlüssel, den du eingegeben hast, "
+"scheint nicht gültig zu sein. Du kannst deinen Lizenzschlüssel stets auf "
+"deiner Downloads-Seite bei %s nachsehen. Automatische Updates sind nicht "
+"verfügbar, bis du einen gültigen Lizenzschlüssel eingegeben hast."
+
+#: class-MarketPress_Auto_Update.php:382
+#, php-format
+msgid ""
+"<strong>All is fine.</strong> You are using a valid license key from %s for "
+"this plugin."
+msgstr ""
+"<strong>Alles ist gut.</strong> Du benutzt einen gültigen Lizenzschlüssel "
+"von %s für dieses Plugin."
+
+#: class-MarketPress_Auto_Update.php:396
+#, php-format
+msgid "Enter a valid license key from %s below."
+msgstr "Gib einen gültigen Lizenzschlüssel von %s ein."
+
+#: class-MarketPress_Auto_Update.php:401
+msgid "Help! I need to retrieve my key."
+msgstr "Hilfe! Ich muss meinen Lizenzschlüssel nachsehen."
+
+#: class-MarketPress_Auto_Update.php:407
+msgid ""
+"<strong>Whoops!</strong> The license key you have entered appears not to be "
+"valid. Automatic updates for this plugin have been disabled until you enter "
+"a valid key."
+msgstr ""
+"<strong>Hoppla!</strong> Der Lizenzschlüssel, den du eingegeben hast, "
+"scheint nicht gültig zu sein. Du kannst deinen Lizenzschlüssel stets auf "
+"deiner Downloads-Seite bei %s nachsehen. Automatische Updates sind nicht "
+"verfügbar, bis du einen gültigen Lizenzschlüssel eingegeben hast."
+
+#: class-MarketPress_Auto_Update.php:412
+#, php-format
+msgid ""
+"<strong>All is fine.</strong> You are using a valid license key from %s for "
+"this plugin. <a href=\"%s\">Delete Key</a>."
+msgstr ""
+"<strong>Alles ist gut.</strong> Du benutzt einen gültigen Lizenzschlüssel "
+"von %s für dieses Plugin. <a href=\"%s\">Key löschen</a>!"
+
+#: class-MarketPress_Auto_Update.php:423
+msgid "Your license status"
+msgstr "Status deiner Lizenz"
+
+#: class-MarketPress_Auto_Update.php:434
+msgid "License Key"
+msgstr "Lizenzschlüssel"
+
+#: class-MarketPress_Auto_Update.php:436
+msgid "Activate"
+msgstr "Aktivieren"
+
+#: class-MarketPress_Auto_Update.php:615
+msgid "License key has been deleted."
+msgstr "Lizenzschlüssel wurde gelöscht."
+
+#: class-MarketPress_Auto_Update.php:621
+msgid "License activated successfully."
+msgstr "Lizenz erfolgreich aktiviert."
+
+#: class-MarketPress_Auto_Update.php:627 class-MarketPress_Auto_Update.php:634
+#: class-MarketPress_Auto_Update.php:643 class-MarketPress_Auto_Update.php:652
+msgid "License cannot be activated."
+msgstr "Lizenz kann nicht aktiviert werden."
+
+#: class-MarketPress_Auto_Update.php:628
+msgid "The license key you have entered is not correct."
+msgstr "Der Lizenzschlüssel, den du eingegeben hast, ist nicht korrekt."
+
+#: class-MarketPress_Auto_Update.php:650
+#, php-format
+msgid ""
+"You have reached the URL limit for your license. Please upgrade your license or change the current license domain in your %s."
+msgstr ""
+"Du hast das URL-Limit für deine Lizenz erreicht. Bitte upgrade deine Lizenz oder ändere die aktuelle Lizenzdomain im deinem %s."
+
+#: class-MarketPress_Auto_Update.php:644
+#, php-format
+msgid ""
+"Something went wrong. Please try again later or contact the support staff at "
+"%s."
+msgstr ""
+"Etwas ist schief gelaufen. Bitte versuche es später noch einmal und "
+"kontaktiere den Support bei %s."
+
+#: class-MarketPress_Auto_Update.php:653
+#, php-format
+msgid ""
+"Your license does not appear to be valid for this plugin. Please update your "
+"license at %s."
+msgstr ""
+"Deine Lizenz scheint nicht gültig zu sein. Bitte aktualisiere deine Lizenz "
+"bei %s."
+
+#~ msgid "MarketPress Auto Updater"
+#~ msgstr "MarketPress Auto Updater"
+
+#~ msgid ""
+#~ "<strong>All is fine.</strong> You are using a valid license key from %s "
+#~ "for this plugin. If you need to enter a new key, just override the "
+#~ "current one and save. Or just <a href=\"%s\">delete it</a> to make it "
+#~ "disappear."
+#~ msgstr ""
+#~ "<strong>Alles ist gut.</strong> Du benutzt einen gültigen Lizenzschlüssel "
+#~ "von %s für dieses Plugin. Wenn du einen neuen Lizenzschlüssel eingeben "
+#~ "möchtest, überschreibe den jetzigen einfach und speichere. Oder <a href="
+#~ "\"%s\">lösche ihn</a>."
+
+#~ msgid "https://marketpress.com"
+#~ msgstr "https://marketpress.de"
+
+#~ msgid "MarketPress"
+#~ msgstr "MarketPress"
+
+#~ msgid ""
+#~ "<strong>All is fine.</strong> You are using a valid license key from %s "
+#~ "for this plugin. If you need to enter a new key, just override the "
+#~ "current one and save."
+#~ msgstr ""
+#~ "<strong>Alles ist gut.</strong> Du benutzt einen gültigen Lizenzschlüssel "
+#~ "von %s für dieses Plugin. Wenn du einen neuen Lizenzschlüssel eingeben "
+#~ "möchtest, überschreibe den jetzigen einfach und speichere."

@@ -1,0 +1,32 @@
+.pos1 {
+	text-align: center;
+}
+.pos2 {
+	text-align: center;
+}
+.column1 {
+	width: 800px;
+	height: 243px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	background-color: black;
+}
+.column2 {
+	width: 800px;
+	height: 243px;
+	border-radius: 20px;
+	background-color: black;
+}
+#word {
+	position: relative;
+	float: left;
+	top: 40%;
+	left: 50%;
+	color: white;
+	transform: translate(-50%, -50%);
+}
+#controlgroup {
+	width: auto;
+}

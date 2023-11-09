@@ -1,0 +1,676 @@
+$color_black: #0d1115;
+$color_white: #fff;
+
+
+@mixin w($w, $mw) {
+	min-width: $w;
+	max-width: $mw;
+}
+
+@mixin wrap($w) {
+	width: $w;
+	margin: 0 auto;
+}
+
+@mixin br($r) {
+	-webkit-border-radius: $r;
+	-moz-border-radius: $r;
+	-ms-border-radius: $r;
+	border-radius: $r;
+}
+
+@mixin brAll($tl, $tr, $br, $bl) {
+	-webkit-border-radius: $tl $tr $br $bl;
+	-moz-border-radius: $tl $tr $br $bl;
+	-ms-border-radius: $tl $tr $br $bl;
+	border-radius: $tl $tr $br $bl;
+}
+
+@mixin fs($size) {
+	font-size: $size;
+}
+
+@mixin lh($line) {
+	line-height: $line;
+}
+
+@mixin ls($space) {
+	letter-spacing: $space;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+}
+
+body {
+	font-family: robotoregular, Tahoma, Helvetica;
+	@include fs(18px);
+}
+
+p {
+	$color: $color_black;
+}
+
+.clear {
+	clear: both;
+}
+
+
+#container {
+	@include w(990px, 100%);
+	margin: 0 auto;
+	
+	.wrap {
+		@include wrap(990px);
+	}
+	
+	.header {
+		background: url("../images/bg.jpg") center no-repeat;
+		margin: 0;
+		padding: 0 0 25px 0;
+		background-size: cover;
+
+		.top-menu {
+			overflow: hidden;
+			padding: 15px 0;
+
+			.logo {
+				float: left;
+				margin: 0 108px 0 20px;
+			}
+
+			ul {
+				list-style: none;
+				overflow: hidden;
+				margin: 30px 0 0 0;
+
+				li {
+					float: left;
+					margin: 0 108px 0 0;
+					
+					a {
+						@include fs(18px);
+						color: #fff;
+						font-family: robotolight;
+						text-decoration: none;
+					}
+					
+				}
+				
+				li:last-child {
+					margin: 0;
+				}
+				
+			}
+			
+		}
+
+		.wrap {
+			position: relative;
+		}
+		
+		.left-block {
+			width: 605px;
+
+			.author {
+				color: #fff;
+				@include fs(24px);
+				font-family: roboto_slabregular;
+				text-transform: inherit;
+				margin: 75px 0 45px 0;
+				text-align: center;
+			}
+
+			h1 {
+				font-family: posterizerkguploaded;
+				color: #fff;
+				@include fs(64px);
+				font-weight: normal;
+
+				span {
+					display: inline-block;
+					@include fs(79px);
+					@include lh(84px);
+				}
+
+				.php {
+					background: #ed3b39;
+					padding: 7px 15px;
+					@include br(15px);
+				}
+
+				.mysql {
+					background: #ff9000;
+					padding: 7px 15px;
+					@include br(15px);
+				}
+				
+			}
+
+			.menu_course {
+				color: #fff;
+				@include fs(24px);
+				font-family: roboto_slabregular;
+				margin: 80px 0 0 0;
+				padding: 0 0 50px 0;
+				text-align: center;
+			}
+
+			
+		}
+		
+	}
+	
+	.course {
+		
+		.block_course {
+			box-sizing: border-box;
+			padding: 0 25px;
+			border-bottom: 2px dashed #7a8694;
+			margin: 25px 0 0 0;
+
+			img {
+				display: block;
+				margin: 50px auto 30px;
+			}
+
+			.files {
+
+				.title {
+					color: #000;
+					margin: 20px 0 20px 0;
+				}
+
+				.block {
+
+					p {
+
+						span {
+							color: #7a8694;
+						}
+
+					}
+
+				}
+
+			}
+
+			.title {
+				@include fs(40px);
+				color: #ff9000;
+				font-family: posterizerkguploaded;
+				text-align: center;
+
+				span {
+					color: $color_black;
+					font-family: roboto_slabbold;
+					@include fs(40px);
+				}
+
+			}
+
+			.block {
+				width: 50%;
+				float: left;
+				box-sizing: border-box;
+				margin: 15px 0 40px;
+
+				p {
+					@include fs(20px);
+					font-family: robotolight;
+					margin: 6px 0;
+
+					a {
+						color: $color_black;
+						text-decoration: none;
+					}
+
+					a:hover {
+						text-decoration: underline;
+					}
+
+					span {
+						color: #ff9000;
+						display: inline-block;
+						margin: 0 5px 0 0;
+					}
+				}
+
+				.block_dop {
+					margin: 15px 0 30px;
+
+					.source {
+						display: inline-block;
+						margin: 0 35px 0 0;
+
+						> a {
+							width: 162px;
+							display: block;
+							background: url("../images/floppy.png") 15px center no-repeat #ff9000;
+							@include br(5px);
+							color: #fff;
+							font-family: robotolight;
+							text-decoration: none;
+							box-sizing: border-box;
+							padding: 9px 0 9px 60px;
+							@include fs(16px);
+						}
+
+						> a:hover {
+							background-color: #eb8604;
+						}
+
+					}
+
+					.lesson {
+						display: inline-block;
+						position: relative;
+
+						> a {
+							width: 162px;
+							display: block;
+							background: url("../images/list.png") 15px center no-repeat #eb3937;
+							@include br(5px);
+							color: #fff;
+							font-family: robotolight;
+							text-decoration: none;
+							box-sizing: border-box;
+							padding: 9px 0 9px 60px;
+							@include fs(16px);
+						}
+
+						> a:hover {
+							background-color: #d52a28;
+						}
+
+						.homework {
+							width: 430px;
+							position: absolute;
+							left: 202px;
+							top: -50px;
+							background: #edf0f3;
+							padding: 30px 45px;
+							box-sizing: border-box;
+							@include br(10px);
+							z-index: 10;
+							display: none;
+
+							p {
+								@include fs(16px);
+								color: #000;
+								font-family: robotolight;
+								@include lh(25px);
+
+								a {
+									text-decoration: none;
+									color: #00f;
+								}
+
+								a:hover {
+									text-decoration: underline;
+								}
+
+							}
+
+							ol {
+
+								li {
+									@include fs(16px);
+									color: #000;
+									font-family: robotolight;
+									@include lh(25px);
+									margin: 5px 0;
+
+									a {
+										text-decoration: none;
+										color: #00f;
+									}
+
+									a:hover {
+										text-decoration: underline;
+									}
+
+								}
+
+							}
+
+						}
+
+						.homework::after {
+							position: absolute;
+							content: "";
+							left: -15px;
+							top: 50px;
+							margin: 0 0 0 -30px;
+							border: 18px solid transparent;
+							border-right: 30px solid #edf0f3;
+						}
+
+					}
+
+				}
+
+			}
+
+			.block:last-child {
+
+				.lesson {
+
+					.homework {
+						left: -470px;
+						top: -50px;
+					}
+
+					.homework::after {
+						position: absolute;
+						content: "";
+						right: -45px;
+						top: 50px;
+						left: auto;
+						margin: 0 0 0 -30px;
+						border: 18px solid transparent;
+						border-left: 30px solid #edf0f3;
+					}
+
+				}
+
+			}
+
+			.bonus {
+
+				.title {
+					color: #000;
+					@include fs(40px);
+					margin-top: 50px;
+
+					.blue {
+						color: #5a8bca;
+					}
+
+					.orange {
+						color: #eb8604;
+					}
+
+					.green {
+						color: #75ad14;
+					}
+
+					.red {
+						color: #f70c1a;
+					}
+
+				}
+
+				img {
+					float: left;
+				}
+
+				ol {
+					margin: 0 0 0 55%;
+
+					li {
+						margin: 10px 0;
+
+						a {
+							text-decoration: underline;
+							@include fs(20px);
+							font-family: robotolight;
+							color: #000;
+						}
+
+						a:hover {
+							text-decoration: none;
+						}
+
+					}
+
+				}
+
+				ol.orange {
+					color: #ff9321;
+					margin-top: 240px;
+				}
+
+				ol.orange2 {
+					color: #ff9321;
+					margin-top: 210px;
+				}
+
+				ol.green {
+					color: #75ad14;
+					margin-top: 210px;
+				}
+
+				ol.red {
+					color: #f70c1a;
+					margin-top: 210px;
+				}
+
+				.block_dop {
+					margin: 15px 0 0 55%;
+
+					.source {
+						display: inline-block;
+						margin: 0 35px 0 0;
+
+						> a {
+							width: 162px;
+							display: block;
+							background: url("../images/floppy.png") 15px center no-repeat #ff9000;
+							@include br(5px);
+							color: #fff;
+							font-family: robotolight;
+							text-decoration: none;
+							box-sizing: border-box;
+							padding: 9px 0 9px 60px;
+							@include fs(16px);
+						}
+
+						> a:hover {
+							background-color: #eb8604;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+		.block_course::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+	}
+
+	.tovar {
+		margin: 50px 0 0 0;
+
+		.title_tovar {
+			@include fs(40px);
+			color: #0d1115;
+			font-family: posterizerkguploaded;
+			text-align: center;
+		}
+
+		.course_block {
+			margin: 40px 0 70px 0;
+			overflow: hidden;
+
+			.float {
+				float: left;
+				color: #ff9000;
+				@include fs(22px);
+				text-transform: inherit;
+				margin: 0 0 0 120px;
+			}
+
+			.name {
+
+				span {
+					@include fs(24px);
+					color: $color_black;
+					text-transform: uppercase;
+					display: inline-block;
+					padding: 0 0 0 10px;
+				}
+
+			}
+
+			.name_course {
+				text-align: center;
+				color: #ffc400;
+				@include fs(22px);
+
+				span {
+					@include fs(24px);
+					color: $color_black;
+					text-transform: uppercase;
+					font-family: roboto_slabregular;
+				}
+
+			}
+
+			img {
+				float: left;
+				margin: 20px 30px 0 0;
+			}
+
+			.txt_course {
+				margin: 0 0 0 410px;
+
+				p {
+					@include fs(17px);
+					color: $color_black;
+					margin: 15px 0;
+					font-family: robotolight;
+				}
+
+				.ul {
+					background: url("../images/check.png") left center no-repeat;
+					padding: 0 0 0 30px;
+				}
+
+				.buttons {
+					overflow: hidden;
+					margin: 30px 0 0 0;
+
+					.zakaz {
+						@include fs(25px);
+						color: $color_white;
+						text-align: center;
+						display: block;
+						width: 180px;
+						text-decoration: none;
+						@include br(25px);
+						font-family: robotolight;
+						background: #ff9000;
+						padding: 5px 0 7px;
+						float: left;
+						margin: 0 30px 0 0;
+					}
+
+					.zakaz:hover {
+						background: #eb8604;
+					}
+
+					.detail {
+						text-align: center;
+						width: 180px;
+						display: block;
+						@include fs(18px);
+						color: #454a51;
+						border: 1px solid #454a51;
+						@include br(25px);
+						text-decoration: none;
+						float: left;
+						padding: 8px 0 10px;
+					}
+
+				}
+
+				.buttons2 {
+					margin: 30px 0 0 0;
+				}
+
+			}
+
+		}
+
+		.course_block:nth-child(1) {
+
+			img {
+				float: left;
+				margin: 60px 30px 0 0;
+			}
+		}
+
+		.course_block:nth-child(2) {
+
+			img {
+				float: left;
+				margin: 60px 30px 0 0;
+			}
+		}
+
+	}
+
+	.footer {
+		padding: 0 0 30px 0;
+		
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+
+		.foot-logo {
+			text-align: center;
+
+			span {
+				background: url("../images//triangle.png") left 11px no-repeat;
+				@include fs(29px);
+				color: #009ee3;
+				font-family: roboto_slabregular;
+				padding: 0 0 0 25px;
+			}
+		}
+
+		.footer-menu {
+			width: 833px;
+			margin: 25px auto 35px;
+			background: #f5f7f7;
+			text-align: center;
+			padding: 5px 0;
+
+			a {
+				color: $color_black;
+				@include fs(16px);
+				font-family: robotolight;
+				text-decoration: none;
+				display: inline-block;
+				margin: 0 17px;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
+		}
+
+		.copy {
+			text-align: center;
+			@include fs(14px);
+			font-family: robotolight;
+			margin: 0 0 15px 0;
+		}
+
+	}
+	
+	
+}

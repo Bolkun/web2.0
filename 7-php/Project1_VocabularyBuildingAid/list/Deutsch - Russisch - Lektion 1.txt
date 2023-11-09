@@ -1,0 +1,7 @@
+﻿Hallo!	[халЁ]	Привет!	[privét]
+Hi/Hey!	[хай/хей]	Хай/Хей!	[hái/héi]
+Willkommen!	[вилькóмен]	Добро пожаловать!	[dobró poshálovat]
+Guten Tag!	[гýтен таг]	Добрый день!	[dóbryj den]
+Guten Abend!	[гýтен абенд]	Добрый вечер!	[dóbryj vétscher]
+Grüß Dich!	[грюс диш]	Приветствую тебя!	[privétstvuju tebjá]
+Mahlzeit!	[мáльцайт]	Приятного аппетита!	[prijátnogo apetíta]

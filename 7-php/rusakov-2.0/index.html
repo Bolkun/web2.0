@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>PHP и MySQL с Нуля до Гуру 2.0</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link href="rs/css/reset.css" rel="stylesheet" type="text/css" media="screen" />		
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link rel="stylesheet" href="rs/css/fonts.css" type="text/css" />
+	<link rel="stylesheet" href="scss/style.css" type="text/css" />
+
+
+    <link href="rs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="rs/plugins/fancybox/source/jquery.fancybox.css?v=2.1.2" rel="stylesheet" type="text/css" media="screen" />
+	<link href="rs/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+            
+    <script src="rs/js/jquery-1.10.2.min.js"></script>
+    <script src="rs/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="rs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="rs/plugins/fancybox/source/jquery.fancybox.js?v=2.1.3"></script>
+    <script src="rs/plugins/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+    <script src="rs/js/menu.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			var isAnimated = false;
+			$(".lesson > a").on("click", function(e) {
+			   
+				e.preventDefault();
+				if(isAnimated === false) {
+					isAnimated = true;
+					if($(this).hasClass("open")) {
+
+						var par = $(this).parent();
+						$(".homework", par).hide(500);
+						$(this).removeClass("open");
+						setTimeout(function(){
+							isAnimated = false;
+						}, 500);
+					}
+					else {
+						isAnimated = true;
+						$(".lesson .homework").hide();
+						$(".lesson > a").removeClass("open");
+						var par = $(this).parent();
+					
+						$(".homework", par).show(500);
+						
+						$(this).addClass("open");
+						setTimeout(function(){
+							isAnimated = false;
+						}, 500);
+					}
+				}	
+
+			});
+			
+
+
+		});
+
+		</script>
+	
+</head>
+<body>
+
+	<div id="container">
+
+		<!-- HEADER -->
+		<div class="header">
+			<header>
+				<div class="wrap">
+					<div class="top-menu">
+						<div class="logo">
+							<img src="images/logo.png" alt="" />
+						</div>
+						<ul>
+							<li>
+								<a href="https://srs.myrusakov.ru/list">Другие курсы</a>
+							</li>
+							<li>
+								<a href="https://myrusakov.ru">Мой сайт</a>
+							</li>
+							<li>
+								<a href="https://blog.myrusakov.ru">Мой блог</a>
+							</li>
+							<li>
+								<a href="https://support.myrusakov.ru">Служба поддержки</a>
+							</li>
+						</ul>
+					</div>
+					<div class="left-block">
+						<p class="author">Автор: Михаил Русаков</p>
+						<h1><span class="php">PHP</span> <span>и</span> <span class="mysql">MySQL</span><br />с Нуля до Гуру 2.0<br />ПОЛНАЯ-ВЕРСИЯ</h1>
+						<p class="menu_course">Меню курса</p>
+					</div>
+				</div>
+			</header>
+		</div>
+		<!-- END HEADER -->
+
+   
+</section>
+		<!-- COURSE BLOCK -->
+		<div class="course">
+			<div class="wrap">
+				<div class="block_course">
+					<img src="images/one.png" alt="" />
+					<p class="title">Установка локального сервера</p>
+					<div class="block basic-part">
+
+					
+						<p><span>1.</span> <a href="#video" rel="lessons/1_01.mp4" data-size="1280:720">Как проходить курс?</a></p>
+						<p><span>2.</span> <a href="#video" rel="lessons/1_02.mp4" data-size="1280:720">Что такое PHP и что нового в PHP 7?</a></p>
+
+					</div>
+					<div class="block basic-part">
+						<p><span>3.</span> <a href="#video" rel="lessons/1_03.mp4" data-size="1280:720">Установка OpenServer</a></p>
+						<div class="block_dop">
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Скачайте OpenServer последней версии: <a target="_blank" href="https://ospanel.io/">https://ospanel.io/</a></li>
+										<li>Установите OpenServer.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+						<p><span>4.</span> <a href="#video" rel="lessons/1_04.mp4" data-size="1280:720">Настройка и разбор возможностей OpenServer</a></p>
+						<div class="block_dop">
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Настройте OpenServer.</li>
+										<li>Создайте виртуальный домен, например, mysite.local</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="block_course">
+					<img src="images/two.png" alt="" />
+					<p class="title">Основы языка PHP</p>
+					<div class="block basic-part">
+						<p><span>1.</span> <a href="#video" rel="lessons/2_01.mp4" data-size="1280:720">Hello World</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_1.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Выведите строку через echo: «Меня зовут ИМЯ». Вместо ИМЯ напишите своё имя.</li>
+										<li>Сделайте своё имя внутри тега &lt;b&gt;.&lt;/b&gt;
+										<li>Ознакомьтесь со справочником php.net (зайдите в различные раздeлы, почитайте, попытайтесь понять то, что там написано).</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+						<p><span>2.</span> <a href="#video" rel="lessons/2_02.mp4" data-size="1280:720">Переменные и их типы</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_2.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте целую переменную с именем age и установите значение у неё в виде Вашего возраста.</li>
+										<li>Создайте строковую переменную со значением: «Мой возраст $age лет» и выведите её.</li>
+										<li>Создайте вещественную переменную с любым значением и выведите её.</li>
+										<li>Создайте и выведите булевскую переменную со значением true, а после поменяйте на false и посмотрите, что изменилось в выводе.</li>
+										<li>Создайте переменную со значением null и выведите её. Объясните самому себе, чем отличается null от false, 0 и пустой строки?</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>3.</span> <a href="#video" rel="lessons/2_03.mp4" data-size="1280:720">Действия с переменными</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_3.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте переменную x с любым значением.</li>
+										<li>Выведите результат работы isset(x) и isset(y). Объясните самому себе, что делает isset().</li>
+										<li>Найдите в справочнике php.net функцию проверки переменной на целое значение.</li>
+										<li>Создайте целую переменную и воспользуйтесь функцией из 3-го пункта для проверки значения на целое число.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>4.</span> <a href="#video" rel="lessons/2_04.mp4" data-size="1280:720">Ссылочные переменные</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_4.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте переменную a и жёсткую ссылку b на неё.</li>
+										<li>Измените значение b и выведите значения a и b через echo. Поясните результат.</li>
+										<li>Сделайте символическую ссылку на переменную a.</li>
+										<li>Выведите значение переменной a, используя символическую ссылку из 3-го пункта.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>5.</span> <a href="#video" rel="lessons/2_05.mp4" data-size="1280:720">Константы</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_5.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте константу с размером шрифта.</li>
+										<li>Создайте простую HTML-страницу (обязательно с DOCTYPE и всеми базовыми HTML-тегами: html, head, body).</li>
+										<li>Выведите пару абзацев текста с помощью тега &lt;p&gt;, безусловно, внутри &lt;body&gt;.</li>
+										<li>Установите размер текста для тега &lt;p&gt; в теге &lt;style&gt; внутри тега &lt;head&gt;, подставив значение из константы, созданной в 1-м пункте.</li>
+									</ol>
+									<p>Примечание: Если забыли, как использовать тег &lt;style&gt;, то посмотрите здесь: <a href="http://htmlbook.ru/html/style">http://htmlbook.ru/html/style</a></p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>6.</span><a href="#video" rel="lessons/2_06.mp4" data-size="1280:720">Математические операции</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_6.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте переменные: одну – целую, другую – вещественную.</li>
+										<li>Выведите результат их сложения, вычитания, произведения, деления.</li>
+										<li>Извлеките кубический корень из целой переменной и выведите результат.</li>
+										<li>Сделайте инкремент целой переменной и выведите её.</li>
+										<li>Сделайте 2 декремента целой переменной и выведите её.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>7.</span> <a href="#video" rel="lessons/2_07.mp4" data-size="1280:720">Строковые операции</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_7.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте строковые переменные со следующими значениями: «Мой возраст» и «30 лет».</li>
+										<li>Создайте третью строковую переменную со значением в виде конкатенации строк первой переменной, пробела и второй переменной из 1-го пункта.</li>
+										<li>Выведите получившуюся переменную.</li>
+										<li>Создайте строку, состоящую из 3-х обратных слешей (безусловно, их придётся в строке написать побольше, чтобы в итоге вывелось 3) и выведите её. Должно появиться следующее: \\\</li>
+										<li>* Откройте текстовый файл в «Блокноте» или любом другом редакторе с помощью скрипта на PHP.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>8.</span> <a href="#video" rel="lessons/2_08.mp4" data-size="1280:720">Логические операции</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_8.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте две численных переменных.</li>
+										<li>Выведите результат сравнения на &gt;, &lt;, ==, ===.</li>
+										<li>Напишите произвольное сложное логическое выражение с использованием скобок и всех логических операций: ОТРИЦАНИЕ, И, ИЛИ, ИСКЛЮЧАЮЩЕЕ ИЛИ.</li>
+										<li>Самостоятельно попытайтесь найти ответ.</li>
+										<li>Выведите результат в PHP и сверьтесь с тем, что насчитали Вы. Если ошиблись при расчёте, вернитесь к пункту 3.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>9.</span> <a href="#video" rel="lessons/2_09.mp4" data-size="1280:720">Оператор if-else</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_9.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте переменную со значением в виде Вашего возраста.</li>
+										<li>Выведите строку «Вам меньше 30 лет», если значение переменной меньше 30, «Вам 30 лет», если значение переменной 30 и «Вам больше 30 лет», если значение переменной больше 30.</li>
+										<li>Создайте простую форму для ввода возраста.</li>
+										<li>Получите из формы данные и запишите их в переменную из 1-го пункта.</li>
+										<li>Выведите результат 2-го пункта для уже значения, присланного пользователем из формы. Например, если он вводит 35, должна появиться строка: «Вам больше 30 лет».</li> 
+									</ol>
+									<p>Примечание: Всё это с помощью конструкции if -else.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>10.</span> <a href="#video" rel="lessons/2_10.mp4" data-size="1280:720">Цикл for</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_10.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте простую форму для ввода числа.</li>
+										<li>Если пользователь введёт число меньше 0, то вывести строку: «Число должно быть 0 или больше 0».</li>
+										<li>Если число корректное, то найдите и выведите факториал введённого числа с помощью цикла for.</li>
+									</ol>
+									<p>Примечание: Факториал n = 1 * 2 * 3 * 4 * 5 * … * n, а факториал 0 = факториал 1 = 1</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>11.</span> <a href="#video" rel="lessons/2_11.mp4" data-size="1280:720">Цикл while и do-while</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_11.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Перепишите задачу из предыдущего упражнения с использованием цикла while.</li>
+										<li>Вычислите и выведите сумму чётных чисел от 10 до 40. То есть найдите сумму: 10 + 12 + 14 + 16 + … + 38 + 40</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>12.</span> <a href="#video" rel="lessons/2_12.mp4" data-size="1280:720">Оператор switch-case</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_12.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Выведите форму, куда пользователь будет вводить число.</li>
+										<li>С помощью switch-case выведите строковое представление введённого числа. Например, если пользователь ввёл число 3, надо вывести «три», если  5, то надо вывести «пять».</li>
+										<li>Если пользователь делает ввод числа, представления для которого у Вас нет, надо вывести строку: «Нет представления этого числа в виде строки».</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="block basic-part">
+						<p><span>13.</span> <a href="#video" rel="lessons/2_13.mp4" data-size="1280:720">Массивы и списки</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_13.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте массив из 10 различных чисел.</li>
+										<li>Найдите и выведите сумму всех элементов массива из 1-го пункта, используя цикл for.</li>
+										<li>Повторите пункт 2, но с использованием цикла while.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>14.</span> <a href="#video" rel="lessons/2_14.mp4" data-size="1280:720">Цикл foreach</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_14.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте ассоциативный массив с сотрудниками, где каждый сотрудник будет представлять из себя массив со следующими ключами: name и age. Фактически, это будет двумерный массив.</li>
+										<li>Найдите средний возраст сотрудников и выведите его.</li>
+									</ol>
+									<p>Примечание: Для поиска среднего надо найти сумму возрастов всех сотрудников, а потом разделить эту сумму на их количество.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>15.</span> <a href="#video" rel="lessons/2_15.mp4" data-size="1280:720">Операции с массивами</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_15.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте 2 массива с целыми числами: по 5 и 7 элементов соответственно.</li>
+										<li>Объедините 2 массива в 1.</li>
+										<li>Выведите все чётные числа из получившегося массива.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>16.</span> <a href="#video" rel="lessons/2_16.mp4" data-size="1280:720">Функции</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_16.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Напишите функцию, которая принимает массив, а возвращает сумму его элементов. Если передан не массив, либо в нём нет элементов, либо некоторые элементы не являются числами, то должно возвращаться false.</li>
+										<li>Создайте несколько массивов для последующей передачи их в функцию из 1-го пункта. Массивы должны быть такими, чтобы детально проверить написанную функцию.</li>
+										<li>Передавайте все массивы и смотрите на получившийся результат. Если функция возвращает false, то выводить строку: «Некорректный массив», если идёт число, то выводить: «Сумма элементов массива равна …».</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>17.</span> <a href="#video" rel="lessons/2_17.mp4" data-size="1280:720">Область видимости переменных</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_17.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте две числовые переменные.</li>
+										<li>Напишите функцию, которая будет брать две переменные из 1-го пункта и выводить их сумму.</li>
+										<li>Вызовите эту функцию.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>18.</span> <a href="#video" rel="lessons/2_18.mp4" data-size="1280:720">Рекурсия в функциях</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_18.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Напишите рекурсивную функцию, которая будет принимать 2 параметра: a и b - и возвращать число a в степени b.</li>
+										<li>Проверьте функцию.</li>
+									</ol>
+									<p>Примечание: Ключевой строкой будет что-то типа этого: return $a * func($a, $b – 1); - то есть углубляться внутрь до тех пор, пока $b не станет равной 0. Когда это будет, возвращаем 1 и начинаем подниматься вверх вплоть до выхода.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>19.</span> <a href="#video" rel="lessons/2_19.mp4" data-size="1280:720">Анонимные функции</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_19.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте анонимную функцию и поместите её в переменную. Функция должна просто возвращать сумму двух переданных параметров.</li>
+										<li>Вызовите эту анонимную функцию с помощью переменной.</li>
+										<li>Создайте ещё одну функцию, которая принимает массив с чётным количеством элементов в виде чисел, а также принимает вторым параметром функцию.</li>
+										<li>Внутри этой функции перебирайте сразу по 2 элемента в массиве и выводите результат вызова переданной функции, передавая ей по 2 этих элемента.</li>
+										<li>Вызовите функцию из 3-го пункта, передав ей массив с 4 числами, а также функцию из 1-го пункта.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>20.</span> <a href="#video" rel="lessons/2_20.mp4" data-size="1280:720">Генераторы</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_20.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте анонимную функцию и поместите её в переменную. Функция должна принимать массив и возвращать среднее значение всех элементов.</li>
+										<li>Создайте функцию-генератор, принимающую двумерный массив и функцию. Эта функция на каждой итерации должна возвращать среднее значение текущего массива.</li>
+										<li>Создайте двумерный массив из чисел.</li>
+										<li>С помощью foreach выведите все средние значения элементов двумерного массива.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>21.</span> <a href="#video" rel="lessons/2_21.mp4" data-size="1280:720">Отладочные функции</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_21.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте трёхмерный ассоциативный массив.</li>
+										<li>Выведите его с помощью print_r().</li>
+										<li>Напишите функцию, которая будет выводить результат print_r(), но внутри тега &lt;pre&gt;.</li>
+										<li>Воспользуйтесь этой функцией, передав ей массив из 1-го пункта. Поясните, что изменилось в выводе и почему.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>22.</span> <a href="#video" rel="lessons/2_22.mp4" data-size="1280:720">Массив $_SERVER</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_22.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Выведите некоторые данные в браузер, в таком виде: «Ваш IP-адрес: …&lt;br /&gt;Ваш браузер: …».</li>
+									</ol>
+									<p>Примечание: Все эти данные можно получить из массива $_SERVER. Если забыли, какие ключи и за что отвечают, то выведите его с помощью print_r().</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>23.</span> <a href="#video" rel="lessons/2_23.mp4" data-size="1280:720">Обработка форм</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_23.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте форму с method=”post”.</li>
+										<li>В форме должны быть текстовая область (textarea) и кнопка.</li>
+										<li>В обработчике необходимо принять строку из текстовой области.</li>
+										<li>Создайте массив, где каждый элемент будет содержать 1 символ из переданной строки.</li>
+										<li>Удалите каждый чётный элемент (то есть 0, 2, 4 и так далее).</li>
+										<li>Соедините все элементы получившегося массива в одну строку и выведите её.</li>
+									</ol>
+									<p>Примечание: Должно получиться что-то наподобие этого: пришла строка «Моя строка», а выйти в браузер должно: «о тоа».</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>24.</span> <a href="#video" rel="lessons/2_24.mp4" data-size="1280:720">Инструкции include и require</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_2_24.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Напишите функцию, которая будет выполнять задачу из предыдущего упражнения. То есть принимает строку, а возвращает строку без символов на чётных позициях.</li>
+										<li>Поместите эту функцию в отдельный файл и отправьте этот файл в директорию lib рядом с index.php</li>
+										<li>В index.php подключите этот файл и воспользуйтесь написанной функцией при обработке формы.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="block_course">
+                    <img src="images/three.png" alt="" />
+					<p class="title">Стандартные функции PHP</p>
+					<div class="block basic-part">
+						<p><span>1.</span> <a href="#video" rel="lessons/3_01.mp4" data-size="1280:720">Математические функции</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_1.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+																<div class="homework">
+									<ol>
+										<li>Создайте массив с какими-то ценами, например: 50.25, 20.38, 50.78, 75.75, 50.</li>
+										<li>Создайте массив с новыми ценами, где будут цены со скидкой 23%.</li>
+										<li>Добавьте округление до двух цифр после запятой, чтобы не было таких цен: 58.3275.</li>
+										<li>Выведите массив.</li>
+										<li>Создайте форму, где пользователь должен будет ввести 2 числа.</li>
+										<li>Сгенерируйте и выведите случайное число в диапазоне между числами, введёнными пользователем.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+						<p><span>2.</span> <a href="#video" rel="lessons/3_02.mp4" data-size="1280:720">Строковые функции</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_2.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+																<div class="homework">
+									<ol>
+										<li>Создайте форму с текстовой областью и текстовым полем.</li>
+										<li>Выведите длину строки из текстовой области.</li>
+										<li>Выведите всю строку из текстовой области, а те места, где есть совпадение с тем, что совпадает со строкой из текстового поля, выделите тегом <b>.</li>
+									</ol>
+									<p>Примечание: Например, пользователь ввёл: «Моя строка – это очень длинная строка» и «строка». Должно появиться следующее: «Моя строка – это очень длинная строка»</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>3.</span> <a href="#video" rel="lessons/3_03.mp4" data-size="1280:720">Функции для работы с массивами</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_3.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+																<div class="homework">
+									<ol>
+										<li>Создайте массив из нескольких чисел.</li>
+										<li>Выведите случайный элемент из этого массива, используя mt_rand().</li>
+										<li>Сделайте задачу из пункта 2, но с использованием shuffle().</li>
+										<li>Создайте двумерный массив с сотрудниками, где каждый сотрудник будет представлять из себя ассоциативный массив с именем и возрастом.</li>
+										<li>Сделайте сортировку массива с помощью uasort() так, чтобы все сотрудники были отсортированы по возрасту, например, по возрастанию.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>4.</span> <a href="#video" rel="lessons/3_04.mp4" data-size="1280:720">Функции для работы с датой и временем</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_4.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Узнайте, сколько времени у Вас будет выполняться такой скрипт: &lt;?php for($i = 0; $i < 10**7; $i++); ?&gt;</li>
+										<li>Возьмите текущее время от функции time() и прибавьте к нему случайное значение десятков тысяч секунд. Примерно так: time() + mt_rand(1, 10) * 10000;</li>
+										<li>Выведите текущую дату и конечную из 2-го пункта с помощью функции date().</li>
+										<li>Выведите, сколько осталось часов, минут и секунд до от текущей даты до той, что получилась во 2-м пункте.</li>
+										<li>Выведите форму со списком (select), где пользователь сможет выбрать часовой пояс. Добавьте 3 часовых пояса.</li>
+										<li>Выведите время на сервере и время, которое сейчас у пользователя на основе того часового пояса, который он выбрал.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>5.</span> <a href="#video" rel="lessons/3_05.mp4" data-size="1280:720">Функции для работы с файлами</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_5.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создать форму с текстовой областью и тремя кнопками: «Сохранить», «Загрузить» и «Удалить».</li>
+										<li>Если пользователь вводит в текстовую область какой-то текст и жмёт кнопку «Сохранить», то данный текст должен быть сохранён в текстовый файл на сервере, а у пользователя должна появиться строка: «Сохранение прошло успешно».</li>
+										<li>При нажатии кнопки «Загрузить» в текстовой области должен появиться текст, который был записан до этого в файл. Если файла не существует, то вывести строку: «Файл не существует».</li>
+										<li>При нажатии кнопки «Удалить» файл должен быть удалён, а у пользователя должна появиться строка: «Файл успешно удалён». Если файла не существует, то вывести строку: «Файл не существует».</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>6.</span> <a href="#video" rel="lessons/3_06.mp4" data-size="1280:720">Парсинг INI-файлов</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_6.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте INI-файл, где укажите цвет текста и его размер.</li>
+										<li>Создайте простую HTML-страницу (обязательно с DOCTYPE и всеми базовыми HTML-тегами: html, head, body).</li>
+										<li>Добавьте пару абзацев с помощью тега &lt;p&gt;.</li>
+										<li>Получите данные из INI-файла и подставьте их внутри тега &lt;style&gt;, чтобы у текста внутри тега &lt;p&gt; был соответствующий цвет и размер.</li>
+										<li>* Создайте 2 языковых файла ru.ini и en.ini, где будут языковые константы и их перевод. Например, TITLE=Заголовок – в ru.ini, и TITLE=Title – в en.ini. Далее нужно проанализировать массив $_SERVER и узнать, какой язык предпочтительнее у пользователя. И вывести TITLE из того файла, который будет соответствовать языку пользователя. При этом если задать GET-параметр: lang=ru или lang=en – должно выводиться соответствующее представление языковой константы TITLE, независимо от того, что находится в массиве $_SERVER.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>7.</span> <a href="#video" rel="lessons/3_07.mp4" data-size="1280:720">Права доступа к файлам</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_7.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Сделайте блокировку скрипта, как в уроке.</li>
+										<li>Добейтесь того, чтобы увидеть: «Script is already running»</li>
+									</ol>
+									<p>Примечание: Используйте sleep() и/или длинные циклы.</p>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+					<div class="block basic-part">
+						<p><span>8.</span> <a href="#video" rel="lessons/3_08.mp4" data-size="1280:720">Функции для работы с каталогами</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_8.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте через PHP 5 директорий со случайными именами (например, с помощью функции uniqid()) рядом с index.php, где и запускается скрипт.</li>
+										<li>Зайдите случайным образом в любую из директории с помощью PHP и создайте там файл со случайным названием.</li>
+										<li>Проверьте всё это.</li>
+										<li>Удалите всё, что было создано в 1-м и 2-м пункте через PHP.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>9.</span> <a href="#video" rel="lessons/3_09.mp4" data-size="1280:720">Функции для работы с DNS</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_9.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+									<div class="homework">
+									<ol>
+										<li>Выведите IP-адрес домена google.ru.</li>
+										<li>Выведите имя хоста по IP-адресу из 1-го пункта.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>10.</span> <a href="#video" rel="lessons/3_10.mp4" data-size="1280:720">Запуск внешних программ</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_10.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+									<div class="homework">
+									<ol>
+										<li>Создайте форму, куда пользователь будет вводить путь к текстовому файлу на сервере.</li>
+										<li>Данный файл должен быть открыт в «Блокноте» (или любом другом текстовом редакторе по умолчанию) с помощью скрипта.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>11.</span> <a href="#video" rel="lessons/3_11.mp4" data-size="1280:720">Регулярные выражения. Часть 1</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_11.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Напишите регулярное выражение, которое будет пропускать следующие строки: «57abc», «a7cdc» и «A889c», и не пропускать следующие строки: «/7abc», «57abd».</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>12.</span> <a href="#video" rel="lessons/3_12.mp4" data-size="1280:720">Регулярные выражения. Часть 2</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_12.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+																<div class="homework">
+									<ol>
+										<li>Создайте переменную с текущей датой с помощью функции date(“Y.m.d H:i:s”).</li>
+										<li>Напишите регулярное выражение, которое разберёт эту строку на части (год, месяц, день, час, минута, секунда) и поместит их в массив совпадений.</li>
+										<li>Выведите массив с помощью функции print_r() и проверьте всё тщательно.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>13.</span> <a href="#video" rel="lessons/3_13.mp4" data-size="1280:720">Регулярные выражения. Часть 3</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_13.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+															<div class="homework">
+									<ol>
+										<li>Напишите регулярное выражение для поисках ссылок в тексте.</li>
+										<li>Сделайте замену всех ссылок в некоторой строке на «Ссылки запрещены».</li>
+										<li>* Если ссылка совпадает с адресом Вашего сайта, то её не заменять.</li>
+									</ol>
+                                    <p>Примечание: Полная аналогия с уроком, только заменяются не e-mail, а именно ссылки.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>14.</span> <a href="#video" rel="lessons/3_14.mp4" data-size="1280:720">Функция phpinfo()</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_3_14.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+																				<div class="homework">
+									<ol>
+										<li>Вызовите функцию phpinfo() и изучите её результат.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="block_course">
+					<img src="images/four.png" alt="" />
+					<p class="title">Объектно-ориентированное программирование в PHP</p>
+					<div class="block basic-part">
+						<p><span>1.</span> <a href="#video" rel="lessons/4_01.mp4" data-size="1280:720">Что такое ООП?</a></p>
+						<p><span>2.</span> <a href="#video" rel="lessons/4_02.mp4" data-size="1280:720">3 кита ООП</a></p>
+						<p><span>3.</span> <a href="#video" rel="lessons/4_03.mp4" data-size="1280:720">Создание класса в PHP</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_4_3.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте класс Point (точка).</li>
+										<li>Добавьте в него 2 свойства: x и y (координаты).</li>
+										<li>Создайте объект класса Point.</li>
+										<li>Установите свойства x и y в значения 5 и 3 у объекта из 3-го пункта.</li>
+										<li>Выведите оба свойства объекта из 3-го пункта.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>4.</span> <a href="#video" rel="lessons/4_04.mp4" data-size="1280:720">Конструктор, деструктор и методы</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_4_4.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Добавьте в класс, созданный в предыдущем упражнении, конструктор, принимающий x и y.</li>
+										<li>Внутри конструктора присвойте полям значения, полученные в параметрах конструктора.</li>
+										<li>Напишите GET и SET методы.</li>
+										<li>Проверьте правильность их работы.</li>
+									</ol>
+									<p>Примечание: Вы должны самостоятельно понять, как убедиться, что всё работает верно: какие методы надо выполнить и какие выводы в браузер сделать.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>5.</span> <a href="#video" rel="lessons/4_05.mp4" data-size="1280:720">Модификаторы доступа</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_4_5.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+									<div class="homework">
+									<ol>
+										<li>Сделайте в классе из предыдущего упражнения оба свойства – private.</li>
+										<li>Попытайтесь получить доступ к свойству напрямую. Изучите получившуюся ошибку.</li>
+										<li>Воспользуйтесь методами GET и SET, чтобы получить доступ к свойствам: сначала установив значения свойств x и y (с помощью методов SET), а после выведя получившиеся значения в браузер (с помощью методов GET).</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>6.</span> <a href="#video" rel="lessons/4_06.mp4" data-size="1280:720">Статические свойства и методы</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_4_6.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+									<div class="homework">
+									<ol>
+										<li>Добавьте в класс Point (из предыдущего упражнения) статическое свойство counter, изначально равное 0.</li>
+										<li>Добавьте в конструктор инкремент этого статического свойства. По сути, это будет счётчик объектов.</li>
+										<li>Добавьте статический метод, возвращающий свойство counter.</li>
+										<li>Создайте 3 объекта и выведите с помощью метода из 3-го пункта значение counter. Убедитесь, что оно равно 3.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>7.</span> <a href="#video" rel="lessons/4_07.mp4" data-size="1280:720">"Магические" методы</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_4_7.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Добавьте в класс Point (из предыдущего упражнения) метод __toString() и реализуйте его, вернув строку такого вида: «Точка с координатами (x, y)». Безусловно, вместо x и y должны быть конкретные значения.</li>
+										<li>Создайте 3 разных объекта класса Point и выведите их через echo.</li>
+										<li>Реализуйте метод __get(), в котором при обращении к несуществующему свойству z будет выведено сообщение «Класс Point работает только в двумерном пространстве».</li>
+										<li>Аналогично сделайте метод __set() при попытке изменить свойств z.</li>
+										<li>Так же реализуйте метод call(), в котором выведите ту же строку, что и в пункте 3, при попытке вызвать метод setZ().</li>
+										<li>Создайте 1 объект класса Point и сделайте его клон. Убедитесь, что клонирование прошло успешно, попытавшись изменить свойство любого из объектов и выведя это свойство у обоих объектов. Они должны быть различны.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+					<div class="block basic-part">
+						<p><span>8.</span> <a href="#video" rel="lessons/4_08.mp4" data-size="1280:720">Сериализация объектов</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_4_8.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+									<div class="homework">
+									<ol>
+										<li>Сделайте форму с двумя полями: x и y. Также добавьте кнопки: «Сохранить» и «Загрузить».</li>
+										<li>При вводе x и y и нажатии кнопки «Сохранить» должен быть создан объект класса Point, который необходимо сериализовать.</li>
+										<li>При нажатии кнопки «Загрузить» в поля x и y должны быть подставлены координаты сериализованного объекта.</li>
+									</ol>
+									<p>Примечание: Обязательно выводите различные предупреждения. Например, при попытке «Загрузить» ещё не сохранённый объект или сохранить без заполненных или некорректных полей x и y. Также выводите информацию об успешном сохранении и об успешной загрузке.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>9.</span> <a href="#video" rel="lessons/4_09.mp4" data-size="1280:720">Механизм наследования и абстрактные классы</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_4_9.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте абстрактный класс Shape с абстрактным методом draw().</li>
+										<li>Сделайте класс Point со свойствами x и y (оба public) наследующим класс Shape.</li>
+										<li>Попробуйте создать объект класса Point. Проанализируйте получившуюся ошибку.</li>
+										<li>Реализуйте метод draw() в классе Point, выведя в нём строку: «Рисуем точку с координатами (x, y)». Разумеется, вместо x и y должны быть конкретные значения.</li>
+										<li>Вызовите метод draw() у объекта класса Point и убедитесь, что всё работает правильно.</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>10.</span> <a href="#video" rel="lessons/4_10.mp4" data-size="1280:720">Интерфейсы</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_4_10.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте интерфейс СanMove с методом move().</li>
+										<li>Создайте интерфейс СanFly с методом fly().</li>
+										<li>Создайте класс Car с реализацией интерфейса CanMove, где в методе move() будет выводиться строка «Движение автомобиля».</li>
+										<li>Создайте класс Aircraft с реализацией интерфейса CanFly, где в методе fly() будет выводиться строка «Полёт самолёта».</li>
+										<li>Создайте объект класса Car и вызовите метод move().</li>
+										<li>Создайте объект класса Aircraft и вызовите метод fly().</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>11.</span> <a href="#video" rel="lessons/4_11.mp4" data-size="1280:720">Трейты</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_4_11.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Перепишите предыдущее упражнение, только вместо интерфейсов должны быть трейты и прямо в них должна быть реализация методов move() и fly().</li>
+										<li>В классах Car и Aircraft подключите трейты, удалив при этом реализацию методов move() и fly() (поскольку теперь реализация находится в самих трейтах).</li>
+										<li>Создайте объект класса Car и вызовите метод move().</li>
+										<li>Создайте объект класса Aircraft и вызовите метод fly().</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>12.</span> <a href="#video" rel="lessons/4_12.mp4" data-size="1280:720">Пространство имён</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_4_12.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>В предыдущем упражнении поместите класс Car, Aircraft, а также трейты CanMove и CanFly в отдельные файлы.</li>
+										<li>Добавьте пространство имён в каждый класс и каждый трейт.</li>
+										<li>В index.php подключите эти классы.</li>
+										<li>Создайте объект класса Car и вызовите метод move().</li>
+										<li>Создайте объект класса Aircraft и вызовите метод fly().</li>
+										</ol>
+										<p>Примечание: Для использования классов Вы можете использовать как use, так и писать полный путь. Также можно комбинировать эти способы.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>13.</span> <a href="#video" rel="lessons/4_13.mp4" data-size="1280:720">Импортирование и автозагрузка классов</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_4_13.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Переименуйте файлы из предыдущего упражнения в соответствии с названиями классов. Например, файл класса Car должен называться «Car.php», файл трейта CanMove должен называться «CanMove» и так далее.</li>
+										<li>Поместите все эти файлы в папку lib.</li>
+										<li>Настройте автозагрузку классов.</li>
+										<li>Уберите все require_once (и его аналоги) во всех файлах.</li>
+										<li>Убедитесь, что всё по-прежнему работает.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="block_course">
+					<img src="images/five.png" alt="" />
+					<p class="title">Обработка ошибок и исключений</p>
+					<div class="block basic-part">
+						<p><span>1.</span> <a href="#video" rel="lessons/5_01.mp4" data-size="1280:720">Режим вывода ошибок</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_5_1.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Уберите полностью показ ошибок.</li>
+										<li>Совершите умышленно синтаксическую ошибку и убедитесь, что PHP ничего не напишет.</li>
+										<li>Поставьте показ ошибок обратно, а также установите вывод всех ошибок через: error_reporting(E_ALL);</li>
+										<li>Убедитесь, что синтаксическая ошибка, допущенная во 2-м пункте, появилась.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+						<p><span>2.</span> <a href="#video" rel="lessons/5_02.mp4" data-size="1280:720">Оператор @</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_5_2.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте переменную $a, которой присвойте значение переменной b (которая не существует).</li>
+										<li>Убедитесь, что появился Notice.</li>
+										<li>Добавьте @ так, чтобы Notice исчез.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>3.</span> <a href="#video" rel="lessons/5_03.mp4" data-size="1280:720">Оператор try-catch-finally</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_5_3.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте класс Valid, в котором реализуйте статический метод validEmail($email). Метод validEmail() должен выбрасывать следующие исключения: пустая строка – исключение с message «E-mail не указан», некорректный e-mail (не прошёл проверку в регулярном выражении) – исключение «E-mail указан неправильно», длина e-mail больше 255 символов – исключение «Слишком длинный e-mail». Если всё хорошо, то метод возвращает true.</li>
+										<li>Вызовите метод validEmail(), передавая ему разные параметры, а также перехватывайте и выводите исключения.</li>
+										</ol>
+										<p>Примечание: Обратите внимание, что в методе validEmail() лишь выбрасываются исключения, а уже обработка (то есть блок try-catch) должна быть там, где вызывается этот метод.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="block basic-part">
+						<p><span>4.</span> <a href="#video" rel="lessons/5_04.mp4" data-size="1280:720">Класс Exception</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_5_4.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте 3 класса, наследующих Exception: EmptyException – класс-исключение, который будет создаваться при передаче пустого параметра, LongException – класс-ислючение, который будет создаваться при передаче слишком длинного параметра и InvalidException – класс-исключение, который будет создаваться при передаче некорректного параметра.</li>
+										<li>Переделайте предыдущее упражнение, выбрасывая исключения не класса Exception, а исключения, которые были созданы в 1-м пункте.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>5.</span> <a href="#video" rel="lessons/5_05.mp4" data-size="1280:720">Класс Error</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_5_5.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+																<div class="homework">
+									<ol>
+										<li>Изучите в справочнике класс Error: http://php.net/manual/ru/class.error.php</li>
+										<li>Вызовите 4 любых метода у объекта класса Error внутри блока catch, написанного в самом уроке.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="block_course">
+					<img src="images/six.png" alt="" />
+					<p class="title">Стандартные классы PHP</p>
+					<div class="block basic-part">
+						<p><span>1.</span> <a href="#video" rel="lessons/6_01.mp4" data-size="1280:720">Классы для работы с датой и временем</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_6_1.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте две случайные даты (с помощью mt_rand()) и установив их в 2 объекта класса DateTime.</li>
+										<li>Найдите количество дней, часов, минут и секунд, на которое одна дата отличается от другой.</li>
+										<li>Сделайте разбиение на периоды с интервалом 1 день.</li>
+										<li>В цикле выведите все даты, которые содержатся между созданными в 1-м пункте, с интервалом из 3-го пункта.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+						<p><span>2.</span> <a href="#video" rel="lessons/6_02.mp4" data-size="1280:720">Итераторы</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_6_2.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте класс, реализующий интерфейс Iterator.</li>
+										<li>Добавьте 2 свойства: целое число index (будущий индекс массива) и обычный список list с несколькими элементами.</li>
+										<li>В методах из интерфейса Iterator работайте со свойством index и возвращая при необходимости return $this->list[$this->index];</li>
+										<li>В цикле переберите объект и выводите каждый раз текущее значение в цикле. Убедитесь, что вывелось в итоге всё содержимое свойства list.</li>
+										</ol>
+										<p>Примечание: Например, в rewind() Вы должны написать $this->index = 0; В current() - return $this->list[$this->index] и так далее.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>3.</span> <a href="#video" rel="lessons/6_03.mp4" data-size="1280:720">Виртуальные массивы</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_6_3.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Допишите класс, созданный в предыдущем упражнении, реализовав интерфейс ArrayAccess.</li>
+										<li>Необходимо, чтобы можно было легко и быстро добавлять в список $list (свойство из предыдущего упражнения) новые элементы.</li>
+										<li>Добавьте несколько элементов в объект, обращаясь к нему как к обычному массиву.</li>
+										<li>Убедитесь, что перебор списка за счёт интерфейса Iterator по-прежнему работает без ошибок.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>4.</span> <a href="#video" rel="lessons/6_04.mp4" data-size="1280:720">Класс Directory</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_6_4.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Выберите произвольную директорию у себя на компьютере, в которой много файлов и вложенных директорий.</li>
+										<li>Используя класс Directory и рекурсию, выведите дерево выбранной директории.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="block basic-part">
+						<p><span>5.</span> <a href="#video" rel="lessons/6_05.mp4" data-size="1280:720">Класс Generator</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_6_5.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Напишите функцию-генератор, которая будет принимать 3 параметра: $start, $to, $step.</li>
+										<li>Функция должна на каждой итерации выводить текущее значение $i из цикла for ($i = $start; $i < $to; $i++)
+Переберите этот генератор.</li>
+										<li>Вызовите метод send, в котором передайте целое число.</li>
+										<li>В генераторе надо принять это целое число и установить его в step.</li>
+										<li>Убедитесь, что при изменении значения step, шаг в цикле действительно изменился.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>6.</span> <a href="#video" rel="lessons/6_06.mp4" data-size="1280:720">Класс IntlChar</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_6_6.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Выведите таблицу, где в первой колонке будет выводиться код символа, а во второй колонке его вид.</li>
+										</ol>
+										<p>Примечание: Безусловно, нужно использовать класс IntlChar и цикл. Количество итераций необходимо установить экспериментально. Сама таблица должна быть выведена через теги &lt;table&gt;, &lt;tr&gt; и &lt;td&gt;.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>7.</span> <a href="#video" rel="lessons/6_07.mp4" data-size="1280:720">Отражения</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_6_7.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте класс Point с двумя свойствами x и y, конструктором и 4 методами (getX(), getY(), setX($x) и setY($y)).</li>
+										<li>Используя Reflection, выведите следующую информацию о созданном классе:
+«Имя класса: Point
+Свойства: x, y
+Методы: getX(), getY(), setX($x), setY($y)»</li>
+										</ol>
+										<p>Примечание: Безусловно, здесь потребуется использование циклов.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="block_course">
+					<img src="images/seven.png" alt="" />
+					<p class="title">Сетевые функции в PHP</p>
+					<div class="block basic-part">
+						<p><span>1.</span> <a href="#video" rel="lessons/7_01.mp4" data-size="1280:720">Работа с заголовками</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_7_1.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Выведите форму со списком и значениями: «Google», «VK», «Сайт автора». Добавьте кнопку «Перейти на сайт».</li>
+										<li>В зависимости от того, что выберет пользователь, необходимо сделать редирект на https://google.ru, https://vk.com или на https://myrusakov.ru</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+						<p><span>2.</span> <a href="#video" rel="lessons/7_02.mp4" data-size="1280:720">Работа с cookie</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_7_2.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Выведите форму со списком и значениями: «Красный», «Зелёный», «Синий».</li>
+										<li>При выборе соответствующего цвета в cookie пользователя должно сохраниться выбранное значение цвета.</li>
+										<li>Сразу после выбора, а также и без выбора, если есть соответствующая cookie, должен быть установлен определённый цвет фона.</li>
+										<li>Убедитесь, что фон действительно устанавливается и сохраняется.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>3.</span> <a href="#video" rel="lessons/7_03.mp4" data-size="1280:720">Работа с сессиями</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_7_3.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Перепишите предыдущее упражнение, но с использованием сессий.</li>
+										<li>Объясните самому себе, в чём отличия этого кода от предыдущего?</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>4.</span> <a href="#video" rel="lessons/7_04.mp4" data-size="1280:720">Авторизация пользователей</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_7_4.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Сделайте авторизацию по той, что была сделана в уроке, но уже для двух пользователей: «Администратор» и «Модератор».</li>
+										<li>Приветствие должно быть соответствующим, то есть «Здравствуйте, Администратор» или «Здравствуйте, Модератор».</li>
+										<li>Реализуйте функцию выхода.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="block basic-part">
+						<p><span>5.</span> <a href="#video" rel="lessons/7_05.mp4" data-size="1280:720">Разбор URL</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_7_5.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Обработайте ссылку вида: http://mysite.local/?page=1&ref=partner – а именно, сохраните значение параметра ref в cookie пользователя, затем удалите вообще параметр ref и сделайте редирект по получившейся ссылке (должен быть редирект сюда: http://mysite.local/?page=1)</li>
+										<li>Убедитесь, что cookie ref действительно сохранилась, выведя её в окно браузера.</li>
+										<li>Реализуйте функцию выхода.</li>
+										</ol>
+										<p>Примечание: Обязательно используйте функции для работы с URL.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>6.</span> <a href="#video" rel="lessons/7_06.mp4" data-size="1280:720">Отправка писем</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_7_6.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Выведите форму на сайте со следующими полями: «От кого», «Кому», «Тема», «Текст письма» и кнопкой «Отправить».</li>
+										<li>Получите все данные из формы и отправьте письмо.</li>
+										<li>Проверьте его наличие в папке \userdata\temp\email и откройте его в текстовом редакторе, чтобы убедиться, что письмо отправилось правильно.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>7.</span> <a href="#video" rel="lessons/7_07.mp4" data-size="1280:720">Класс PHPMailer</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_7_7.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Скачайте себе класс PHPMailer и положите его в папку lib внутри Вашего сайта.</li>
+										<li>Настройте автозагрузку классов.</li>
+										<li>Перепишите предыдущее упражнение, но отправку письма сделайте с использованием класса PHPMailer.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="block_course">
+					<img src="images/eith.png" alt="" />
+					<p class="title"> Расширения PHP</p>
+					<div class="block basic-part">
+						<p><span>1.</span> <a href="#video" rel="lessons/8_01.mp4" data-size="1280:720">Разбор файла php.ini</a></p>
+						<p><span>2.</span> <a href="#video" rel="lessons/8_02.mp4" data-size="1280:720">Проверка данных на валидность</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_8_2.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте класс Valid, в котором сделайте статические методы validEmail($email) и validURL($url).</li>
+										<li>Реализация этих методов должна быть следующей: данные пустые – выброс исключения, данные некорректные – выброс исключения, данные правильные – возврат true.</li>
+										<li>Проверьте на различные входные параметры созданные методы.</li>
+										</ol>
+										<p>Примечание: Для корректности проверки Email и URL используйте filter_var().</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>3.</span> <a href="#video" rel="lessons/8_03.mp4" data-size="1280:720">Работа с изображениями. Основы </a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_8_3.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Найдите у себя на компьютере какое-нибудь изображение.</li>
+										<li>Выведите размеры выбранного изображения в браузер, используя функции imageSX() и imageSY().</li>
+										<li>Выведите само изображение в браузер (разумеется, без использования тега &lt;img /&gt;).</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>4.</span> <a href="#video" rel="lessons/8_04.mp4" data-size="1280:720">Работа с изображениями. Графические примитивы</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_8_4.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Нарисуйте человечка (голова, туловище, руки ноги, глаза, рот, нос, уши).</li>
+										<li>Раскрасьте его соответствующими цветами.</li>
+										<li>Выведите его в браузер и сохраните его в файл.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="block basic-part">
+						<p><span>5.</span> <a href="#video" rel="lessons/8_05.mp4" data-size="1280:720">Работа с изображениями. Текст</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_8_5.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Случайным образом сгенерируйте строку из 4-х символов.</li>
+										<li>На основании этой строки создайте капчу.</li>
+										<li>Как можно сильнее попытайтесь усложнить её для роботов: поворачивайте символ на угол, сливайте с цветом фона, добавьте на фон множество случайно расположенных пикселей.</li>
+										<li>В итоге, должно получиться изображение, код на котором способен прочитать человек, и в то же время роботам это будет сделать крайне затруднительно.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>6.</span> <a href="#video" rel="lessons/8_06.mp4" data-size="1280:720">Работа с cURL</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_8_6.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Возьмите любой Интернет-магазин, например, с ноутбуками.</li>
+										<li>Используя cURL, а также регулярные выражения, получите данные о 100 ноутбуках (скорее всего, придётся перемещаться по страницам на сайте). Необходимые данные: модель, цена, операционная система.</li>
+										<li>Сохраните все эти данные в текстовый файл.</li>
+										</ol>
+										<p>Примечание: Это хоть и достаточно сложное упражнение, но безумно полезное. Оно научит Вас правильно парсить сайты и собирать с них необходимую информацию, а также сохранять её для последующего анализа и использования.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>7.</span> <a href="#video" rel="lessons/8_07.mp4" data-size="1280:720">Другие расширения</a></p>
+
+					</div>
+				</div>
+
+				<div class="block_course">
+					<img src="images/nine.png" alt="" />
+					<p class="title">База данных и СУБД MySQL</p>
+					<div class="block basic-part">
+						<p><span>1.</span> <a href="#video" rel="lessons/9_01.mp4" data-size="1280:720">Что такое база данных, SQL и MySQL?</a></p>
+						<p><span>2.</span> <a href="#video" rel="lessons/9_02.mp4" data-size="1280:720">Управление базой данных через phpMyAdmin</a></p>
+
+						<p><span>3.</span> <a href="#video" rel="lessons/9_03.mp4" data-size="1280:720">Создание базы данных, таблиц и добавление записей</a></p>
+						<div class="block_dop">
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте базу данных.</li>
+										<li>Создайте таблицу с часовыми поясами со следующими полями: id, title, offset (количество секунд, на которое время отличается от Гринвича).</li>
+										<li>Добавьте 3 записи. Например: 1, Russia/Moscow, 10800.</li>
+										</ol>
+										<p>Примечание: offset может быть как положительным, так и отрицательным.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>4.</span> <a href="#video" rel="lessons/9_04.mp4" data-size="1280:720">Индексы</a></p>
+						<div class="block_dop">
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Добавьте индекс в таблице из предыдущего упражнения для offset.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>5.</span> <a href="#video" rel="lessons/9_05.mp4" data-size="1280:720">Импорт и экспорт БД в phpMyAdmin</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_9_5.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Импортируйте таблицы из исходников к уроку в базу данных из предыдущего урока.</li>
+										<li>Экспортируйте все таблицы в Вашей базе данных, сохранив их в SQL -файл.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>6.</span> <a href="#video" rel="lessons/9_06.mp4" data-size="1280:720">Подключение к MySQL через PHP</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_9_6.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Подключитесь к своей базе данных, обработав ошибку подключения, а также установив кодировку соединения utf8.</li>
+										<li>Укажите неправильные данные для подключения, чтобы проверить обработку ошибки.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="block basic-part">
+						
+
+						<p><span>7.</span> <a href="#video" rel="lessons/9_07.mp4" data-size="1280:720">Создание базы данных через PHP</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_9_7.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте через PHP новую базу данных.</li>
+										<li>Проверьте, что она появилась.</li>
+										<li>Удалите через PHP созданную базу данных в 1-м пункте.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>8.</span> <a href="#video" rel="lessons/9_08.mp4" data-size="1280:720">Создание таблиц через PHP</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_9_8.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Откройте SQL -файл из упражнения, где Вы делали экспорт своей базы данных.</li>
+										<li>Найдите SQL-запрос, где создаётся таблица с часовыми поясами.</li>
+										<li>Через PHP создайте новую базу данных и добавьте в неё таблицу с часовыми поясами, используя код, найденный во 2-м пункте.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>9.</span> <a href="#video" rel="lessons/9_09.mp4" data-size="1280:720">Добавление записей в БД через PHP</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_9_9.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Сделайте форму с двумя текстовыми полями: «Часовой пояс» и «Смещение».</li>
+										<li>Получите данные из формы после её отправки.</li>
+										<li>Сделайте данные безопасными, проверьте их на корректность.</li>
+										<li>Добавьте в таблицу с часовыми поясами новую запись с данными из 3-го пункта.</li>
+										<li>Используя phpMyAdmin, узнайте синтаксис изменения и удаления записей.</li>
+										<li>Создайте отдельный скрипт, где добавьте произвольную запись в таблицу с часовыми поясами.</li>
+										<li>Измените значения поля offset и title у добавленной записи. Проверьте это.</li>
+										<li>Удалите эту запись. Убедитесь, что запись действительно исчезла из таблицы.</li>
+										</ol>
+										<p>Примечание: Мы обязательно будем рассматривать и обновление, и удаление записей. Но мне бы очень хотелось, чтобы Вы научились получать новые знания самостоятельно. Поэтому попытайтесь освоить этот материал сами.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>10.</span> <a href="#video" rel="lessons/9_10.mp4" data-size="1280:720">Выборка записей из БД через PHP</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_9_10.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Получите массив всех часовых поясов в таблице.</li>
+										<li>Выведите их title в форме у пользователя в виде списка.</li>
+										<li>После выбора пользователем элемента списка и отправки формы необходимо из таблицы вытащить соответствующее смещение для данного часового пояса и вывести его пользователю в формате: «Смещение от Гринвича: $offset секунд».</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+						<p><span>11.</span> <a href="#video" rel="lessons/9_11.mp4" data-size="1280:720">Расширение PDO</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_9_11.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Объедините предыдущих два упражнения, реализовав: добавление часовых поясов пользователем, а также вывод данных о выбранном часовом поясе.</li>
+										</ol>
+										<p>Примечание: Всего будет две формы на одной странице. Всё общение с базой данных делайте с использованием расширения PDO.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="block_course">
+					<img src="images/ten.png" alt="" />
+					<p class="title">Компоненты</p>
+					<div class="block basic-part">
+						<p><span>1.</span> <a href="#video" rel="lessons/10_01.mp4" data-size="1280:720">Composer</a></p>
+						<p><span>2.</span> <a href="#video" rel="lessons/10_02.mp4" data-size="1280:720">Установка компонента Monolog</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_10_2.rar">Исходники</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="block basic-part">
+
+						<p><span>3.</span> <a href="#video" rel="lessons/10_03.mp4" data-size="1280:720">Ипользование компонента Monolog</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_10_3.rar">Исходники</a>
+							</div>
+						</div>
+
+						<p><span>4.</span> <a href="#video" rel="lessons/10_04.mp4" data-size="1280:720">Установка и использование компонента PHP_CodeSniffer</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_10_4.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Найдите любой понравившийся компонент на этом сайте: https://packagist.org/</li>
+										<li>Установите его через composer</li>
+										<li>Разберитесь хоть немного в документации и хоть немного используйте установленный компонент.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="block_course">
+					<img src="images/eleven.png" alt="" />
+					<p class="title">Примеры программирования на PHP</p>
+					<div class="block basic-part">
+						<p><span>1.</span> <a href="#video" rel="lessons/11_01.mp4" data-size="1280:720">Загрузка файлов на сервер</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_11_1.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Реализуйте загрузку на сайт аудио-файлов в папку music. В обязательном порядке, они все должны пройти проверку на безопасность.</li>
+										<li>Используя функции для работы с файлами и директориями, а также используя тег audio, выведите плееры для проигрывания всех музыкальных файлов из папки music.</li>
+										</ol>
+										<p>Примечание: На одной странице будет и форма для загрузки новых аудио-файлов, и множество плееров для проигрывания того, что уже загружено.</p>
+								</div>
+							</div>
+						</div>
+						<p><span>2.</span> <a href="#video" rel="lessons/11_02.mp4" data-size="1280:720">Создание и проверка капчи</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_11_2.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Сделайте механизм регистрации и авторизации на сайте. При регистрации обязательно должна быть правильно введена капча.</li>
+										</ol>
+										<p>Примечание: Все данные о пользователях должны храниться в соответствующей таблице. Все пароли должны быть хэшированы через md5(). После успешной авторизации должно выводиться: «Здравствуйте, $name». В форме регистрации должны быть следующие поля: имя, логин, пароль и текстовое поле для ввода капчи. Обязательно реализуйте функцию выхода. Данные об авторизации храните в сессии.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>3.</span> <a href="#video" rel="lessons/11_03.mp4" data-size="1280:720">Паттерн Model-View-Controller (MVC)</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_11_3.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Установите исходники из урока к себе на сайт.</li>
+										<li>Добавьте ещё одну страницу.</li>
+										<li>* Подумайте, как лучше сделать обработку форм на страницах, и реализуйте свой механизм. Например, банальная форма с двумя текстовыми полями, после отправки которой должна выводиться сумма введённых чисел.</li>
+										</ol>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="block basic-part">
+						
+
+						<p><span>4.</span> <a href="#video" rel="lessons/11_04.mp4" data-size="1280:720">Ajax и JSON</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_11_4.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте базу данных и таблицу в ней с часовыми поясами.</li>
+										<li>Добавьте 3 записи в таблицу.</li>
+										<li>Выведите форму с выбором часового пояса и кнопкой «Получить время».</li>
+										<li>После нажатия на кнопку «Получить время» без перезагрузки страницы с использованием технологии Ajax должно быть получено текущее время выбранного часового пояса.</li>
+										</ol>
+										<p>Примечание: Эту задачу, безусловно, можно и вовсе реализовать без Ajax (заранее выведя на странице все часовые пояса и смещения по времени в «скрытом» теге или в переменных самого скрипта на JavaScript). Однако, Ваша задача будет получить данные из формы, отправить их на сервер, на сервере получить время в заданном часовом поясе, вернуть его обратно в JavaScript, где уже вывести его на странице у пользователя.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>5.</span> <a href="#video" rel="lessons/11_05.mp4" data-size="1280:720">Создание системы голосования</a></p>
+						<div class="block_dop">
+							<div class="source">
+								<a href="sources/Lesson_11_5.rar">Исходники</a>
+							</div>
+							<div class="lesson">
+								<a href="#">Упражнения</a>
+								<div class="homework">
+									<ol>
+										<li>Создайте базу данных и таблицы с товарами (id, название товара, цена товара), а также таблицу с заказами (id, id заказанных товаров через запятую, сумма заказа, телефон клиента).</li>
+										<li>Добавьте в таблицу с товарами 5 различных наименований.</li>
+										<li>Выведите на странице все товары, а также кнопки под ними «Добавить в корзину».</li>
+										<li>При добавлении товара в корзину в сессии у пользователя должен сохраниться ID выбранного товара. Если товаров уже несколько, то они должны идти через запятую. Этот механизм сделайте через jQuery+Ajax. После успешного добавления товара можно вывести в JavaScript: alert(‘Товар успешно добавлен в корзину’);</li>
+										<li>При клике по кнопке «Оформить заказ» должен быть переход на страницу с формой, где пользователь видит список заказанных товаров, их цену и общую стоимость. В форме только поле «Телефон» и кнопка «Оформить заказ».</li>
+										<li>После отправки формы необходимо добавить новую запись в таблицу с заказами.</li>
+										<li>На отдельной странице выведите таблицу (через теги &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;) со всеми заказами и их данными. Заголовки у таблицы: ID заказа, Заказанные товары, Общая стоимость, Телефон клиента.</li>
+										</ol>
+										<p>Примечание: Обратите внимание, что при выводе заказов в таблице в столбце «Заказанные товары» должны выводиться именно названия заказанных товаров, а не просто их ID.</p>
+								</div>
+							</div>
+						</div>
+
+						<p><span>6.</span> <a href="#video" rel="lessons/11_06.mp4" data-size="1280:720">Заключение</a></p>
+
+					</div>
+				</div>
+
+				<div class="block_course">
+					<div class="bonus ">
+						<p class="title">Бонус №1. <span class="blue">Работа с API ВКонтакте</span></p>
+						<img src="images/bonus.png" alt="" />
+						<ol class="orange basic-part">
+							<li><a href="#video" rel="bonus/1_01.mp4" data-size="1280:720">Что такое API и зачем нужно API ВКонтакте?</a></li>
+							<li><a href="#video" rel="bonus/1_02.mp4" data-size="1280:720">Создание и регистрация приложения</a></li>
+							<li><a href="#video" rel="bonus/1_03.mp4" data-size="1280:720">Получение токена</a></li>
+							<li><a href="#video" rel="bonus/1_04.mp4" data-size="1280:720">Пишем код своего приложения</a>
+                                <div class="block_dop">
+                                    <div class="source">
+                                        <a href="sources/Bonus_1_4.rar">Исходники</a>
+                                    </div>
+                                </div>
+                            </li>
+						</ol>
+					</div>
+				</div>
+
+				<div class="block_course">
+					<div class="bonus">
+						<p class="title">Бонус №2. <span class="orange">PHAR-архивы</span></p>
+						<img src="images/bonus2.png" alt="" />
+						<ol class="orange2 basic-part">
+							<li><a href="#video" rel="bonus/2_01.mp4" data-size="1280:720">Что такое PHAR-архив и зачем он нужен?</a></li>
+							<li><a href="#video" rel="bonus/2_02.mp4" data-size="1280:720">Создание PHAR-архива</a>
+                                <div class="block_dop">
+                                    <div class="source">
+                                        <a href="sources/Bonus_2_2.rar">Исходники</a>
+                                    </div>
+                                </div>
+                            </li>
+							<li><a href="#video" rel="bonus/2_03.mp4" data-size="1280:720">Подключение и чтение PHAR-архива</a>
+                                <div class="block_dop">
+                                    <div class="source">
+                                        <a href="sources/Bonus_2_3.rar">Исходники</a>
+                                    </div>
+                                </div>
+                            </li>
+							<li><a href="#video" rel="bonus/2_04.mp4" data-size="1280:720">Управление PHAR-архивом</a>
+                                <div class="block_dop">
+                                    <div class="source">
+                                        <a href="sources/Bonus_2_4.rar">Исходники</a>
+                                    </div>
+                                </div>
+                            </li>
+							<li><a href="#video" rel="bonus/2_05.mp4" data-size="1280:720">Распаковка PHAR-архива</a>
+                                <div class="block_dop">
+                                    <div class="source">
+                                        <a href="sources/Bonus_2_5.rar">Исходники</a>
+                                    </div>
+                                </div>
+                            </li>
+						</ol>
+					</div>
+				</div>
+                
+				<div class="block_course">
+					<div class="bonus">
+						<p class="title">Бонус №3. <span class="red">Стандарты PSR</span></p>
+						<img src="images/bonus3.png" alt="" />
+						<ol class="red  basic-part">
+							<li><a href="#video" rel="bonus/3_01.mp4" data-size="1280:720">Что такое PSR и зачем он нужен?</a> </li>
+							<li><a href="#video" rel="bonus/3_02.mp4" data-size="1280:720">PSR-1. Базовый стандарт кодирования</a>
+                                <div class="block_dop">
+                                    <div class="source">
+                                        <a href="sources/Bonus_3_2.rar">Исходники</a>
+                                    </div>
+                                </div>
+                            </li>
+							<li><a href="#video" rel="bonus/3_03.mp4" data-size="1280:720">PSR-2. Стандарт по стилю кода</a>
+                                <div class="block_dop">
+                                    <div class="source">
+                                        <a href="sources/Bonus_3_3.rar">Исходники</a>
+                                    </div>
+                                </div>
+                            </li>
+							<li><a href="#video" rel="bonus/3_04.mp4" data-size="1280:720">PSR-3. Интерфейс протоколирования</a>
+                                <div class="block_dop">
+                                    <div class="source">
+                                        <a href="sources/Bonus_3_4.rar">Исходники</a>
+                                    </div>
+                                </div>
+                            </li>
+							<li><a href="#video" rel="bonus/3_05.mp4" data-size="1280:720">PSR-4. Автозагрузка</a>
+                                <div class="block_dop">
+                                    <div class="source">
+                                        <a href="sources/Bonus_3_5.rar">Исходники</a>
+                                    </div>
+                                </div>
+                            </li>
+						</ol>
+					</div>
+				</div>
+                <div class="block_course">
+					<div class="bonus">
+						<p class="title">Бонус №4. <span class="green">UNIT-тестирование на PHP</span></p>
+						<img src="images/bonus4.png" alt="" />
+						<ol class="green  basic-part">
+							<li><a href="#video" rel="bonus/4_01.mp4" data-size="1280:720">Основы UNIT-тестирования</a>
+                                <div class="block_dop">
+                                    <div class="source">
+                                        <a href="sources/Bonus_4_1.rar">Исходники</a>
+                                    </div>
+                                </div>
+                            </li>
+							<li><a href="#video" rel="bonus/4_02.mp4" data-size="1280:720">Принадлежности теста</a>
+                                <div class="block_dop">
+                                    <div class="source">
+                                        <a href="sources/Bonus_4_2.rar">Исходники</a>
+                                    </div>
+                                </div>
+                            </li>
+							<li><a href="#video" rel="bonus/4_03.mp4" data-size="1280:720">Исключения</a>
+                                <div class="block_dop">
+                                    <div class="source">
+                                        <a href="sources/Bonus_4_3.rar">Исходники</a>
+                                    </div>
+                                </div>
+                            </li>
+							<li><a href="#video" rel="bonus/4_04.mp4" data-size="1280:720">Наборы тестов</a>
+                                <div class="block_dop">
+                                    <div class="source">
+                                        <a href="sources/Bonus_4_4.rar">Исходники</a>
+                                    </div>
+                                </div>
+                            </li>
+						</ol>
+					</div>
+				</div>
+
+				<div class="block_course">
+					<div class="files">
+						<img src="images/files.png" alt="" />
+						<p class="title">Дополнительные материалы</p>
+						<div class="block basic-part">
+							<p><span>1.</span> <a target="_blank" href="https://ospanel.io/">OpenServer</a></p>
+							<p><span>2.</span> <a target="_blank" href="https://notepad-plus-plus.org/download/v7.3.3.html">NotePad++</a></p>
+							<p><span>3.</span> <a target="_blank" href="https://php.net">Справочник по PHP</a></p>
+						</div>
+						<div class="block basic-part">
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- END COURSE -->
+
+		<!-- DOP TOVAR -->
+		<div class="tovar">
+			<div class="wrap">
+					
+				<p class="title_tovar">Полная версия курса<br />"PHP и MySQL с Нуля до Гуру 2.0"</p>
+
+				<div class="course_block">
+					<img src="images/php7-cover.png" alt="" />
+					<div class="txt_course">
+						<p>Данный курс научит Вас программировать на самом популярном Web-языке в мире - PHP. Курс состоит из 11 разделов, в которых с нуля рассказывается и показывается процесс написания различных скриптов на PHP.</p>
+<p>В курсе Вы узнаете всю необходимую теоретическую часть, а также увидите массу практических примеров, в том числе, и из моей практики.</p>
+<p>Почти к каждому уроку идут упражнения.</p>
+<p>Просмотрев данный курс, Вы сможете создавать абсолютно любые PHP-сайты любой сложности.</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- END FOOTER -->
+	</div>
+	
+	<div style="display: none;"><div id="video"></div></div>
+
+</body>
+</html>
